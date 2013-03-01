@@ -3,11 +3,11 @@ Cadena_e
 
 An integrated meta-modeling based software engineering framework
 
-(_Revival of the Cadena research project for typing-based meta-modeling
-in component-oriented architectures and model driven development_)
+(Revival of the Cadena research project for typing-based meta-modeling
+in component-oriented architectures and model driven development)
 
 
-# Abstract
+## Abstract
 
 Model driven development and meta-modeling is a novel approach to
 software engineering that focuses on radical modularization and
