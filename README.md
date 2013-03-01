@@ -1,7 +1,7 @@
 Cadena_e
 ========
 
-##Integrated meta-modeling based software engineering framework##
+_Integrated meta-modeling based software engineering framework_
 
 Revival of the Cadena research project for typing-based meta-modeling
 in component-oriented architectures and model driven development
