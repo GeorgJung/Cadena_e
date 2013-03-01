@@ -1,10 +1,14 @@
-Cadena_e: Integrated meta-modeling based software engineering framework
-=======================================================================
+Cadena_e
+========
+
+##Integrated meta-modeling based software engineering framework##
 
 Revival of the Cadena research project for typing-based meta-modeling
-----------------------------------------------------------------------
 in component-oriented architectures and model driven development
-----------------------------------------------------------------
+
+
+Abstract
+--------
 
 Model driven development and meta-modeling is a novel approach to
 software engineering that focuses on radical modularization and
@@ -12,16 +16,15 @@ consistent, multi-level, abstraction and concretization (i.e.,
 development) of software artifacts through hierarchic modeling. The
 aims of the model driven development paradigm are
 
-    (a) a better management of the enormous complexity of modern-day
-    software,
+(a) a better management of the enormous complexity of modern-day software,
 
-    (b) better re-use of existing software in various contexts,
+(b) better re-use of existing software in various contexts,
 
-    (c) better maintainability of software systems,
+(c) better maintainability of software systems,
 
-    (d) increased reliability of software systems, and
+(d) increased reliability of software systems, and
 
-    (e) a substantial decrease in the costs of software development.
+(e) a substantial decrease in the costs of software development.
 
 In this topic, ##Cadena##, a model-based software engineering
 framework developed at Kansas State University will be enhanced and
@@ -46,13 +49,12 @@ various components interact within a larger system. The structural
 modeling tools in CADENA_e should allow to design component diagram
 styles, create components, and assemble the components into scenarios.
 
-	 Graph-based component diagram editing feature
++ Graph-based component diagram editing feature
 
-	 You will use the graph editing features in eclipse to build a three tier component graph creation and editing feature for CADENA_e.
++ You will use the graph editing features in eclipse to build a three tier component graph creation and editing feature for CADENA_e.
 
-	 Form-based component diagram editing feature
-
-	 You will use the form editing features in eclipse to build a three tier component graph creation and editing feature for CADENA_e.
++ Form-based component diagram editing feature
+You will use the form editing features in eclipse to build a three tier component graph creation and editing feature for CADENA_e.
 
 * Behavioral modeling
 
