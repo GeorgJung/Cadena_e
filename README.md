@@ -7,7 +7,8 @@ An integrated meta-modeling based software engineering framework
 in component-oriented architectures and model driven development)
 
 
-## Abstract
+Abstract
+--------
 
 Model driven development and meta-modeling is a novel approach to
 software engineering that focuses on radical modularization and
@@ -25,19 +26,19 @@ aims of the model driven development paradigm are
 
 + a substantial decrease in the costs of software development.
 
-In this topic, ##Cadena##, a model-based software engineering
+In this topic, *Cadena*, a model-based software engineering
 framework developed at Kansas State University will be enhanced and
 recreated as an Eclipse plugin. The name of the project is
-##Cadena_e##, where 'e' can stand for version 5, "enhanced", "embedded
+*Cadena_e*, where 'e' can stand for version 5, "enhanced", "embedded
 systems", or "Egypt", whichever you like best.
 
 All projects and tasks within this topic will require you to use Java,
 Git, Eclipse, some teamwork, and of course LaTeX
 
-#Projects
+Projects
+--------
 
-
-* Structural modeling
+### Structural modeling
 
 CADENA_e is based on a component oriented programming
 paradigm. Components are software artifacts that form the primary
@@ -48,16 +49,16 @@ various components interact within a larger system. The structural
 modeling tools in CADENA_e should allow to design component diagram
 styles, create components, and assemble the components into scenarios.
 
-_Graph-based component diagram editing feature_
+#### Graph-based component diagram editing feature
 
 You will use the graph editing features in eclipse to build a three tier component graph creation and editing feature for CADENA_e.
 
-_Form-based component diagram editing feature_
+#### Form-based component diagram editing feature
 
 You will use the form editing features in eclipse to build a three tier component graph creation and editing feature for CADENA_e.
 
 
-* Behavioral modeling
+### Behavioral modeling
 
 The original CADENA featured only structural modeling. However, a
 generic, abstract, behavioral specification in form of activity graphs
@@ -67,20 +68,20 @@ eliminated). I this project, graph-based and form-based editors for
 behavioral modeling based on lightweight process coordination will be
 implemented.
 
-_Graph-based process specification feature_
+#### Graph-based process specification feature
 
 You will implement a creation and editing tool for processes based on the Eclipse graph libraries and lightweight process coordination.
 
-_Form-based process specification feature_
+#### Form-based process specification feature
 
 You will use the form editing tools in Eclipse to implement an editing feature for various process algebras or similar process description formalisms.
 
-_Test execution environment_
+#### Test execution environment
 
 You will animate the behavioral specifications (or even execute the various processes) in a test-run environment for validating and debugging.
 
 
-* Verification/validation features
+### Verification/validation features
 
 A major advantage of model driven development is that the "code"
 (i.e., the models) are abstract enough to easily introduce well
@@ -88,14 +89,14 @@ established formal verification procedures without much
 preprocessing. This project will enable model checking on the given
 behavioral models.
 
-_Behavioral model back-end translator_
+#### Behavioral model back-end translator
 
 You will translate the given behavioral description in CADENA_e into
 the input syntax of a well known model-cheking tool. Infrastructure to
 automatically run the model checker is required, editing support or
 backwards translation would be a bonus.
 
-_Time-edit verification formula generator_
+#### Time-edit verification formula generator
 
 Some advanced input artifacts of modern lightweight formal
 verification tools are not easy to use for a software engineer without
@@ -104,7 +105,7 @@ LTL formulas to simple time-line manipulations that are intuitive to
 use.
 
 
-* Dimensional typing
+### Dimensional typing
 
 Sensors measure physical sizes or quantities. These quantities are
 generally compromised of a scalar value and a unit. The units, in
@@ -120,20 +121,20 @@ values are conversion errors that could be avoided by the proven
 technique of typing. This project aims to create a dimensional typing
 system for a plug and play sensor service and component system.
 
-_Dimensional type system_
+#### Dimensional type system
 
 You will develop and implement a dimensional type system for physical
 quantities. It should allow assignments such as "speed = (1km + 25m) /
 20s".
 
 
-* Tool support
+### Tool support
 
 Some features projected for CADENA_e are independent from the
 conceptual part and mainly serve editing and visualization
 convenience. In this project, such features will be implemented.
 
-_Multi-feature graph layouter_
+#### Multi-feature graph layouter
 
 Graph-based editing of complex systems often suffers from the size of
 the resulting graphs and the lack of structure and overview. In this
@@ -143,13 +144,13 @@ subgraph-folding, fixing of specific nodes, sorting of nodes according
 to specific properties, etc.
 
 
-* Case study
+### Case study
 
 We will build an example and experimentation system that will
 gradually include the ideas of model driven development for testing
 the concepts of CADENA_e in practice.
 
-_Real-time fitness monitor_
+#### Real-time fitness monitor
 
 You will implement a multi-sensor tracking and analysis tool for a
 specific physical workout routine to track performance and fitness
