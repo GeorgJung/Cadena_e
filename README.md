@@ -64,7 +64,7 @@ The original CADENA featured only structural modeling. However, a
 generic, abstract, behavioral specification in form of activity graphs
 will mark an important step towards pure model driven development
 (where actual coding can be reduced to a minimum or even
-eliminated). In this project, graph-based and form-based editors for
+eliminated). I this project, graph-based and form-based editors for
 behavioral modeling based on lightweight process coordination will be
 implemented.
 
