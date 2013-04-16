@@ -4,12 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: GraphEditor.diagram; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: GraphEditor.graphmodel.diagram.part.GraphModelDiagramEditorPlugin
+Bundle-Activator: GraphEditor.grapheditormodel.diagram.part.GraphEditorModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: GraphEditor.graphmodel.diagram.edit.parts,
- GraphEditor.graphmodel.diagram.part,
- GraphEditor.graphmodel.diagram.providers
+Export-Package: GraphEditor.grapheditormodel.diagram.edit.parts, 
+ GraphEditor.grapheditormodel.diagram.part,
+ GraphEditor.grapheditormodel.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,

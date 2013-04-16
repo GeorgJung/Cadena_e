@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
-encoding//model/GraphModel.ecore=UTF-8
-encoding//model/GraphModel.ecorediag=UTF-8
+encoding//model/GraphEditorModel.ecore=UTF-8
+encoding//model/GraphEditorModel.ecore_diagram=UTF-8
+encoding//model/GraphEditorModel.ecorediag=UTF-8

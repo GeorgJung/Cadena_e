@@ -8,9 +8,9 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://graphmodel/1.0"
-            class="GraphEditor.graphmodel.GraphmodelPackage"
-            genModel="model/GraphModel.genmodel"/>
+            uri="http://grapheditormodel/1.0"
+            class="GraphEditor.grapheditormodel.GrapheditormodelPackage"
+            genModel="model/GraphEditorModel.genmodel"/>
    </extension>
 
 </plugin>

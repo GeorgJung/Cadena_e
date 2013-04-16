@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/GraphEditor/model/GraphModel.genmodel
-gmf_dashboard/domainModel=platform\:/resource/GraphEditor/model/GraphModel.ecore
-gmf_dashboard/generationModel=platform\:/resource/GraphEditor/model/GraphModel.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/GraphEditor/model/GraphModel.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/GraphEditor/model/GraphModel.gmfmap
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/GraphEditor/model/GraphModel.gmftool
+gmf_dashboard/domainGenerationModel=platform\:/resource/GraphEditor/model/GraphEditorModel.genmodel
+gmf_dashboard/domainModel=platform\:/resource/GraphEditor/model/GraphEditorModel.ecore
+gmf_dashboard/generationModel=platform\:/resource/GraphEditor/model/GraphEditorModel.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/GraphEditor/model/GraphEditorModel.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/GraphEditor/model/GraphEditorModel.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/GraphEditor/model/GraphEditorModel.gmftool
