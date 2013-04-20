@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{relsize}
+
+\title{Behavioral Model Back-end Translator\\ {\smaller 1st interim report}}
+
+\author{Mohamed Hisham}
+\date{April 2013}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{url}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+In this project, I will be building a translator for a given behavioral description  into the input syntax of a well known model-checking tool. 
+
+\section{Technologies used during the project}
+
+\subsection{SPIN model-checker}
+I used SPIN as it was suggested. SPIN is a model-checker (\emph{i.\,e.} a tool for verifying software models). Models to be verified are described using PROMELA. The verification process runs as follows; SPIN generates a C code according to the input model that performs an efficient on-line verification of the system’s correctness properties.
+
+\subsection{PROMELA}
+A language for describing models for later verification using SPIN. On the next period of my work on this project I will be translating the data structure of a given graph to PROMELA. For that I had to learn the language and understand it well.
+
+\subsection{Eclipse 3.8 Modeling Tools}
+I used it because I thought it would be helpful regarding the work im doing in the project which is something related to models.
+
+\subsection{EGit eclipse plug-in}
+We installed this plug-in on eclipse me and my team mates that are working on topics related to my project, so we can exchange data on the repository of Git hub. And also it was required to preserve the results we will accomplish later in the progress.
+
+\subsection{EpiSpin eclipse plug-in}
+I found this plug-in to be an easy tool to work with SPIN through it. It compiles the PROMELA code written on eclipse and generates the C code then compiles it for results. Another reason why I installed it is because it can generate the corresponding graph for the PROMELA code by converting it into something called Dot code then to the graph (state diagram) this way I can easily debug my work.
+
+\subsection{GMF eclipse plug-in}
+This plug-in is used to create/edit graphs. Which is required for me to create the graph that I will begin my work with (convert it to PROMELA then start the verification process)
+
+
+\newpage
+\section{References}
+\url{http://spinroot.com/}
+\newline
+\url{http://tele.informatik.uni-freiburg.de/lehre/ss01/dres/dres.part6.pdf}
+
+
+\end{document}
