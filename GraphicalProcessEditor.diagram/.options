@@ -1,0 +1,7 @@
+# Tracing options for the GraphicalProcessEditor.diagram plug-in
+
+# Common issues
+GraphicalProcessEditor.diagram/debug=false
+
+# Visual IDs
+GraphicalProcessEditor.diagram/debug/visualID=false

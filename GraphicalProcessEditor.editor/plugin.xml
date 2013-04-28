@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="GraphicalProcessEditor.graphicalprocesseditormodel.presentation.GraphicalprocesseditormodelModelWizardID"
+            name="%_UI_GraphicalprocesseditormodelModelWizard_label"
+            class="GraphicalProcessEditor.graphicalprocesseditormodel.presentation.GraphicalprocesseditormodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GraphicalprocesseditormodelModelFile.gif">
+         <description>%_UI_GraphicalprocesseditormodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="GraphicalProcessEditor.graphicalprocesseditormodel.presentation.GraphicalprocesseditormodelEditorID"
+            name="%_UI_GraphicalprocesseditormodelEditor_label"
+            icon="icons/full/obj16/GraphicalprocesseditormodelModelFile.gif"
+            extensions="graphicalprocesseditormodel"
+            class="GraphicalProcessEditor.graphicalprocesseditormodel.presentation.GraphicalprocesseditormodelEditor"
+            contributorClass="GraphicalProcessEditor.graphicalprocesseditormodel.presentation.GraphicalprocesseditormodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/GraphicalProcessEditor/src" modelPluginID="GraphicalProcessEditor"
+    modelName="GraphicalProcessEditorModel" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>GraphicalProcessEditorModel.ecore</foreignModel>
+  <genPackages prefix="Graphicalprocesseditormodel" basePackage="GraphicalProcessEditor"
+      disposableProviderFactory="true" ecorePackage="GraphicalProcessEditorModel.ecore#/">
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Graph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/GraphNodes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/End"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/Start"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Node/Edges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Node/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Node/Attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Edge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Edge/Source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Edge/Target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Edge/Value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
