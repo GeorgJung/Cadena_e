@@ -54,7 +54,7 @@ public class NodeCreateCommand extends EditElementCommand {
 				.createNode();
 
 		GraphicalProcessEditor.graphicalprocesseditormodel.Graph owner = (GraphicalProcessEditor.graphicalprocesseditormodel.Graph) getElementToEdit();
-		owner.getGraphNodes().add(newElement);
+		owner.getEReference0().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

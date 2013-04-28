@@ -306,10 +306,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigureNodeNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeAttributeFigure;
 
 		/**
 		 * @generated
@@ -341,12 +337,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureNodeNameFigure);
 
-			fFigureNodeAttributeFigure = new WrappingLabel();
-
-			fFigureNodeAttributeFigure.setText("<...>");
-
-			this.add(fFigureNodeAttributeFigure);
-
 		}
 
 		/**
@@ -354,13 +344,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureNodeNameFigure() {
 			return fFigureNodeNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeAttributeFigure() {
-			return fFigureNodeAttributeFigure;
 		}
 
 	}

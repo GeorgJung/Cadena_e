@@ -51,7 +51,7 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
 		return GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-				.getGraph_GraphNodes();
+				.getGraph_EReference0();
 	}
 
 	/**

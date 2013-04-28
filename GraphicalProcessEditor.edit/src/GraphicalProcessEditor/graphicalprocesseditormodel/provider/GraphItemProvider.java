@@ -62,32 +62,10 @@ public class GraphItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEndPropertyDescriptor(object);
 			addStartPropertyDescriptor(object);
+			addEndPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the End feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEndPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Graph_End_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Graph_End_feature", "_UI_Graph_type"),
-				 GraphicalprocesseditormodelPackage.Literals.GRAPH__END,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -113,6 +91,28 @@ public class GraphItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the End feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Graph_End_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Graph_End_feature", "_UI_Graph_type"),
+				 GraphicalprocesseditormodelPackage.Literals.GRAPH__END,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -124,7 +124,7 @@ public class GraphItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GraphicalprocesseditormodelPackage.Literals.GRAPH__GRAPH_NODES);
+			childrenFeatures.add(GraphicalprocesseditormodelPackage.Literals.GRAPH__EREFERENCE0);
 		}
 		return childrenFeatures;
 	}
@@ -176,7 +176,7 @@ public class GraphItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Graph.class)) {
-			case GraphicalprocesseditormodelPackage.GRAPH__GRAPH_NODES:
+			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,7 +196,7 @@ public class GraphItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GraphicalprocesseditormodelPackage.Literals.GRAPH__GRAPH_NODES,
+				(GraphicalprocesseditormodelPackage.Literals.GRAPH__EREFERENCE0,
 				 GraphicalprocesseditormodelFactory.eINSTANCE.createNode()));
 	}
 

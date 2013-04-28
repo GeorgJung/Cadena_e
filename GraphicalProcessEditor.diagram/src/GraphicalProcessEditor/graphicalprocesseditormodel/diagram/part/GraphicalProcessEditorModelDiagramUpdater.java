@@ -42,7 +42,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Graph modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Graph) view
 				.getElement();
 		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelNodeDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getGraphNodes().iterator(); it
+		for (Iterator<?> it = modelElement.getEReference0().iterator(); it
 				.hasNext();) {
 			GraphicalProcessEditor.graphicalprocesseditormodel.Node childElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Node) it
 					.next();

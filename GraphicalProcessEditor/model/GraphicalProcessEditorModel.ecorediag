@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_H69qILBTEeK9LIe0rZByUg" type="EcoreTools" name="GraphicalProcessEditorModel" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_IrNbULBTEeK9LIe0rZByUg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_IrP3kLBTEeK9LIe0rZByUg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_IrRFsLBTEeK9LIe0rZByUg" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_IrRFsbBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IrRFsrBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IrRFs7BTEeK9LIe0rZByUg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_IrRswLBTEeK9LIe0rZByUg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_IrRswbBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IrRswrBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IrRsw7BTEeK9LIe0rZByUg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_IrOCYLBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GraphicalProcessEditorModel.ecore#//Graph"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IrOCYbBTEeK9LIe0rZByUg" x="84" y="192"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Jk0j4LBTEeK9LIe0rZByUg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Jk0j47BTEeK9LIe0rZByUg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Jk0j5LBTEeK9LIe0rZByUg" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_Mr7ewLBTEeK9LIe0rZByUg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GraphicalProcessEditorModel.ecore#//Node/Name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Mr7ewbBTEeK9LIe0rZByUg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_PdqmkLBTEeK9LIe0rZByUg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GraphicalProcessEditorModel.ecore#//Node/Attribute"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PdqmkbBTEeK9LIe0rZByUg"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Jk0j5bBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jk0j5rBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jk0j57BTEeK9LIe0rZByUg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Jk1K8LBTEeK9LIe0rZByUg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Jk1K8bBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jk1K8rBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jk1K87BTEeK9LIe0rZByUg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Jk0j4bBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GraphicalProcessEditorModel.ecore#//Node"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jk0j4rBTEeK9LIe0rZByUg" x="276" y="180"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_KOcvsLBTEeK9LIe0rZByUg" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_KOdWwLBTEeK9LIe0rZByUg" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_KOdWwbBTEeK9LIe0rZByUg" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_OXyjoLBTEeK9LIe0rZByUg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="GraphicalProcessEditorModel.ecore#//Edge/Value"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OXyjobBTEeK9LIe0rZByUg"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_KOdWwrBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_KOdWw7BTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_KOdWxLBTEeK9LIe0rZByUg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_KOdWxbBTEeK9LIe0rZByUg" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_KOdWxrBTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_KOdWx7BTEeK9LIe0rZByUg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_KOdWyLBTEeK9LIe0rZByUg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_KOcvsbBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="GraphicalProcessEditorModel.ecore#//Edge"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KOcvsrBTEeK9LIe0rZByUg" x="516" y="192"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_H69qIbBTEeK9LIe0rZByUg"/>
+  <element xmi:type="ecore:EPackage" href="GraphicalProcessEditorModel.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Zv65gLBTEeK9LIe0rZByUg" type="3002" source="_IrNbULBTEeK9LIe0rZByUg" target="_Jk0j4LBTEeK9LIe0rZByUg">
+    <children xmi:type="notation:Node" xmi:id="_Zv8HoLBTEeK9LIe0rZByUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Zv8HobBTEeK9LIe0rZByUg" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Zv8usLBTEeK9LIe0rZByUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Zv8usbBTEeK9LIe0rZByUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Zv65gbBTEeK9LIe0rZByUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Zv65grBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GraphicalProcessEditorModel.ecore#//Graph/EReference0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Zv65g7BTEeK9LIe0rZByUg" points="[21, 10, -160, 3]$[113, 10, -68, 3]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZwNNYLBTEeK9LIe0rZByUg" id="(0.7941176470588235,0.6190476190476191)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_fVDWALBTEeK9LIe0rZByUg" type="3002" source="_IrNbULBTEeK9LIe0rZByUg" target="_Jk0j4LBTEeK9LIe0rZByUg">
+    <children xmi:type="notation:Node" xmi:id="_fVD9ELBTEeK9LIe0rZByUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_fVD9EbBTEeK9LIe0rZByUg" x="-20" y="53"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_fVD9ErBTEeK9LIe0rZByUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_fVD9E7BTEeK9LIe0rZByUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_fVDWAbBTEeK9LIe0rZByUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_fVDWArBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GraphicalProcessEditorModel.ecore#//Graph/Start"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fVDWA7BTEeK9LIe0rZByUg" points="[0, -2, -129, 5]$[0, -50, -129, -43]$[129, -50, 0, -43]$[129, -14, 0, -7]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fVFyQLBTEeK9LIe0rZByUg" id="(0.9411764705882353,0.07142857142857142)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fVGZULBTEeK9LIe0rZByUg" id="(0.2302158273381295,0.12307692307692308)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_mM6lsLBTEeK9LIe0rZByUg" type="3002" source="_IrNbULBTEeK9LIe0rZByUg" target="_Jk0j4LBTEeK9LIe0rZByUg">
+    <children xmi:type="notation:Node" xmi:id="_mM7MwLBTEeK9LIe0rZByUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_mM7MwbBTEeK9LIe0rZByUg" x="-11" y="-55"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_mM7MwrBTEeK9LIe0rZByUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_mM7Mw7BTEeK9LIe0rZByUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_mM6lsbBTEeK9LIe0rZByUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_mM6lsrBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GraphicalProcessEditorModel.ecore#//Graph/End"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mM6ls7BTEeK9LIe0rZByUg" points="[0, 10, -121, -2]$[0, 54, -121, 42]$[121, 54, 0, 42]$[121, 21, 0, 9]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mM-QELBTEeK9LIe0rZByUg" id="(0.9215686274509803,0.7619047619047619)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mM-QEbBTEeK9LIe0rZByUg" id="(0.15827338129496402,0.8615384615384616)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_v1iFwLBTEeK9LIe0rZByUg" type="3002" source="_Jk0j4LBTEeK9LIe0rZByUg" target="_KOcvsLBTEeK9LIe0rZByUg">
+    <children xmi:type="notation:Node" xmi:id="_v1is0LBTEeK9LIe0rZByUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_v1is0bBTEeK9LIe0rZByUg" x="-39" y="-1"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_v1is0rBTEeK9LIe0rZByUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_v1is07BTEeK9LIe0rZByUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_v1iFwbBTEeK9LIe0rZByUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_v1iFwrBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GraphicalProcessEditorModel.ecore#//Node/Edges"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_v1iFw7BTEeK9LIe0rZByUg" points="[12, 2, -130, 1]$[143, -20, 1, -21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v1lJELBTEeK9LIe0rZByUg" id="(0.9136690647482014,0.3230769230769231)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_v1lJEbBTEeK9LIe0rZByUg" id="(0.23529411764705882,0.4489795918367347)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_46YxcLBTEeK9LIe0rZByUg" type="3002" source="_KOcvsLBTEeK9LIe0rZByUg" target="_Jk0j4LBTEeK9LIe0rZByUg">
+    <children xmi:type="notation:Node" xmi:id="_46YxdLBTEeK9LIe0rZByUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_46YxdbBTEeK9LIe0rZByUg" x="-28" y="-74"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_46YxdrBTEeK9LIe0rZByUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_46Yxd7BTEeK9LIe0rZByUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_46YxcbBTEeK9LIe0rZByUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_46YxcrBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GraphicalProcessEditorModel.ecore#//Edge/Source"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_46Yxc7BTEeK9LIe0rZByUg" points="[9, -4, 126, 7]$[9, -64, 126, -53]$[-123, -64, -6, -53]$[-123, -16, -6, -5]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_46amoLBTEeK9LIe0rZByUg" id="(0.03361344537815126,0.10204081632653061)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_46bNsLBTEeK9LIe0rZByUg" id="(0.920863309352518,0.09230769230769231)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="__ZVx4LBTEeK9LIe0rZByUg" type="3002" source="_KOcvsLBTEeK9LIe0rZByUg" target="_Jk0j4LBTEeK9LIe0rZByUg">
+    <children xmi:type="notation:Node" xmi:id="__ZVx5LBTEeK9LIe0rZByUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="__ZVx5bBTEeK9LIe0rZByUg" x="-11" y="74"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__ZWY8LBTEeK9LIe0rZByUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="__ZWY8bBTEeK9LIe0rZByUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="__ZVx4bBTEeK9LIe0rZByUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="__ZVx4rBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="GraphicalProcessEditorModel.ecore#//Edge/Target"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__ZVx47BTEeK9LIe0rZByUg" points="[6, 4, 125, 3]$[6, 41, 125, 40]$[-126, 41, -7, 40]$[-126, 8, -7, 7]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__ZYOILBTEeK9LIe0rZByUg" id="(0.058823529411764705,0.9183673469387755)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__ZYOIbBTEeK9LIe0rZByUg" id="(0.9280575539568345,0.8923076923076924)"/>
+  </edges>
+</notation:Diagram>
