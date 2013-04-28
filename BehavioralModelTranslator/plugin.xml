@@ -51,7 +51,7 @@
                id="BehavioralModelTranslator.toolbars.sampleToolbar">
             <command
                   commandId="BehavioralModelTranslator.commands.sampleCommand"
-                  icon="icons/sample.gif"
+                  icon="icons/suicidal.gif"
                   tooltip="Say hello world"
                   id="BehavioralModelTranslator.toolbars.sampleCommand">
             </command>
