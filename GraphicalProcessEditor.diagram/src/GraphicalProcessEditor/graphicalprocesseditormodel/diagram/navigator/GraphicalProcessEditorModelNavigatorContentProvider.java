@@ -212,33 +212,45 @@ public class GraphicalProcessEditorModelNavigatorContentProvider implements
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
 
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID: {
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID: {
 			LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelAbstractNavigatorItem> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup incominglinks = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Node_2001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup outgoinglinks = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Node_2001_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Edge sv = (Edge) view;
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup target = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Transaction_4001_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup source = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Transaction_4001_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
+			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
 			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}
@@ -253,13 +265,19 @@ public class GraphicalProcessEditorModelNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID));
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID));
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
@@ -267,33 +285,64 @@ public class GraphicalProcessEditorModelNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID: {
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID: {
 			LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelAbstractNavigatorItem> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup target = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Edge_4001_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup source = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Edge_4001_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup incominglinks = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Join_2002_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup outgoinglinks = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Join_2002_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
+			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
 					Collections.singleton(sv),
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
-			if (!source.isEmpty()) {
-				result.add(source);
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID: {
+			LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelAbstractNavigatorItem> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup incominglinks = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Process_2001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup outgoinglinks = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorGroup(
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.NavigatorGroupName_Process_2001_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+							.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}

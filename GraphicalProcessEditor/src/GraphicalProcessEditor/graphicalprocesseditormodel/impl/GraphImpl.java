@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphImpl#getEReference0 <em>EReference0</em>}</li>
+ *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphImpl#getProcesses <em>Processes</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphImpl#getStart <em>Start</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphImpl#getEnd <em>End</em>}</li>
  * </ul>
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class GraphImpl extends EObjectImpl implements Graph {
 	/**
-	 * The cached value of the '{@link #getEReference0() <em>EReference0</em>}' containment reference list.
+	 * The cached value of the '{@link #getProcesses() <em>Processes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEReference0()
+	 * @see #getProcesses()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Node> eReference0;
+	protected EList<Node> processes;
 
 	/**
 	 * The cached value of the '{@link #getStart() <em>Start</em>}' reference list.
@@ -91,11 +91,11 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Node> getEReference0() {
-		if (eReference0 == null) {
-			eReference0 = new EObjectContainmentEList<Node>(Node.class, this, GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0);
+	public EList<Node> getProcesses() {
+		if (processes == null) {
+			processes = new EObjectContainmentEList<Node>(Node.class, this, GraphicalprocesseditormodelPackage.GRAPH__PROCESSES);
 		}
-		return eReference0;
+		return processes;
 	}
 
 	/**
@@ -130,8 +130,8 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
-				return ((InternalEList<?>)getEReference0()).basicRemove(otherEnd, msgs);
+			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
+				return ((InternalEList<?>)getProcesses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -144,8 +144,8 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
-				return getEReference0();
+			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
+				return getProcesses();
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
 				return getStart();
 			case GraphicalprocesseditormodelPackage.GRAPH__END:
@@ -163,9 +163,9 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
-				getEReference0().clear();
-				getEReference0().addAll((Collection<? extends Node>)newValue);
+			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
+				getProcesses().clear();
+				getProcesses().addAll((Collection<? extends Node>)newValue);
 				return;
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
 				getStart().clear();
@@ -187,8 +187,8 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
-				getEReference0().clear();
+			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
+				getProcesses().clear();
 				return;
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
 				getStart().clear();
@@ -208,8 +208,8 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
-				return eReference0 != null && !eReference0.isEmpty();
+			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
+				return processes != null && !processes.isEmpty();
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
 				return start != null && !start.isEmpty();
 			case GraphicalprocesseditormodelPackage.GRAPH__END:

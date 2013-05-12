@@ -51,7 +51,7 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	protected EStructuralFeature getFeatureToSynchronize() {
 		return GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-				.getGraph_EReference0();
+				.getGraph_Processes();
 	}
 
 	/**
@@ -82,8 +82,10 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 	 * @generated
 	 */
 	private boolean isMyDiagramElement(View view) {
-		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID == GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+		int visualID = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view);
+		return visualID == GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID
+				|| visualID == GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -247,10 +249,10 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID: {
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getNode_2001ContainedLinks(view));
+						.getProcess_2001ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -258,10 +260,21 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID: {
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getEdge_4001ContainedLinks(view));
+						.getJoin_2002ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
+						.getTransaction_4001ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

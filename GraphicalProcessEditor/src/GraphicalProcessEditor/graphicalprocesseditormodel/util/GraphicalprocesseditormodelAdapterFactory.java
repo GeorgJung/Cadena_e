@@ -2,7 +2,11 @@
  */
 package GraphicalProcessEditor.graphicalprocesseditormodel.util;
 
-import GraphicalProcessEditor.graphicalprocesseditormodel.*;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
+import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Node;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -76,8 +80,16 @@ public class GraphicalprocesseditormodelAdapterFactory extends AdapterFactoryImp
 				return createNodeAdapter();
 			}
 			@Override
-			public Adapter caseEdge(Edge object) {
-				return createEdgeAdapter();
+			public Adapter caseTransaction(Transaction object) {
+				return createTransactionAdapter();
+			}
+			@Override
+			public Adapter caseJoin(Join object) {
+				return createJoinAdapter();
+			}
+			@Override
+			public Adapter caseProcess(GraphicalProcessEditor.graphicalprocesseditormodel.Process object) {
+				return createProcessAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -128,16 +140,44 @@ public class GraphicalprocesseditormodelAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge <em>Edge</em>}'.
+	 * Creates a new adapter for an object of class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction <em>Transaction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Edge
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Transaction
 	 * @generated
 	 */
-	public Adapter createEdgeAdapter() {
+	public Adapter createTransactionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Join <em>Join</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Join
+	 * @generated
+	 */
+	public Adapter createJoinAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process
+	 * @generated
+	 */
+	public Adapter createProcessAdapter() {
 		return null;
 	}
 

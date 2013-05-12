@@ -2,7 +2,11 @@
  */
 package GraphicalProcessEditor.graphicalprocesseditormodel.impl;
 
-import GraphicalProcessEditor.graphicalprocesseditormodel.*;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
+import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory;
+import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -57,8 +61,9 @@ public class GraphicalprocesseditormodelFactoryImpl extends EFactoryImpl impleme
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case GraphicalprocesseditormodelPackage.GRAPH: return createGraph();
-			case GraphicalprocesseditormodelPackage.NODE: return createNode();
-			case GraphicalprocesseditormodelPackage.EDGE: return createEdge();
+			case GraphicalprocesseditormodelPackage.TRANSACTION: return createTransaction();
+			case GraphicalprocesseditormodelPackage.JOIN: return createJoin();
+			case GraphicalprocesseditormodelPackage.PROCESS: return createProcess();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -79,9 +84,9 @@ public class GraphicalprocesseditormodelFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node createNode() {
-		NodeImpl node = new NodeImpl();
-		return node;
+	public Transaction createTransaction() {
+		TransactionImpl transaction = new TransactionImpl();
+		return transaction;
 	}
 
 	/**
@@ -89,9 +94,19 @@ public class GraphicalprocesseditormodelFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Edge createEdge() {
-		EdgeImpl edge = new EdgeImpl();
-		return edge;
+	public Join createJoin() {
+		JoinImpl join = new JoinImpl();
+		return join;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GraphicalProcessEditor.graphicalprocesseditormodel.Process createProcess() {
+		ProcessImpl process = new ProcessImpl();
+		return process;
 	}
 
 	/**

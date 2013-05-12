@@ -31,22 +31,31 @@ public interface GraphicalprocesseditormodelFactory extends EFactory {
 	Graph createGraph();
 
 	/**
-	 * Returns a new object of class '<em>Node</em>'.
+	 * Returns a new object of class '<em>Transaction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Node</em>'.
+	 * @return a new object of class '<em>Transaction</em>'.
 	 * @generated
 	 */
-	Node createNode();
+	Transaction createTransaction();
 
 	/**
-	 * Returns a new object of class '<em>Edge</em>'.
+	 * Returns a new object of class '<em>Join</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Edge</em>'.
+	 * @return a new object of class '<em>Join</em>'.
 	 * @generated
 	 */
-	Edge createEdge();
+	Join createJoin();
+
+	/**
+	 * Returns a new object of class '<em>Process</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Process</em>'.
+	 * @generated
+	 */
+	Process createProcess();
 
 	/**
 	 * Returns the package supported by this factory.

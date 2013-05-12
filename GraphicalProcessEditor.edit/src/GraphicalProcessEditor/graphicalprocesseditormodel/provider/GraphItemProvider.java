@@ -124,7 +124,7 @@ public class GraphItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GraphicalprocesseditormodelPackage.Literals.GRAPH__EREFERENCE0);
+			childrenFeatures.add(GraphicalprocesseditormodelPackage.Literals.GRAPH__PROCESSES);
 		}
 		return childrenFeatures;
 	}
@@ -176,7 +176,7 @@ public class GraphItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Graph.class)) {
-			case GraphicalprocesseditormodelPackage.GRAPH__EREFERENCE0:
+			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,8 +196,13 @@ public class GraphItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GraphicalprocesseditormodelPackage.Literals.GRAPH__EREFERENCE0,
-				 GraphicalprocesseditormodelFactory.eINSTANCE.createNode()));
+				(GraphicalprocesseditormodelPackage.Literals.GRAPH__PROCESSES,
+				 GraphicalprocesseditormodelFactory.eINSTANCE.createJoin()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GraphicalprocesseditormodelPackage.Literals.GRAPH__PROCESSES,
+				 GraphicalprocesseditormodelFactory.eINSTANCE.createProcess()));
 	}
 
 	/**

@@ -77,15 +77,18 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	public Image getImage(View view) {
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Node", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Node_2001); //$NON-NLS-1$
+					"Navigator?Link?http://graphicalprocesseditormodel/1.0?Transaction", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4001); //$NON-NLS-1$
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://graphicalprocesseditormodel/1.0?Graph", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Graph_1000); //$NON-NLS-1$
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID:
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://graphicalprocesseditormodel/1.0?Edge", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Edge_4001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Join", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002); //$NON-NLS-1$
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Process", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -142,12 +145,14 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 		}
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-			return getNode_2001Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
+			return getTransaction_4001Text(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return getGraph_1000Text(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID:
-			return getEdge_4001Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+			return getJoin_2002Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+			return getProcess_2001Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -155,13 +160,42 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	/**
 	 * @generated
 	 */
-	private String getNode_2001Text(View view) {
+	private String getTransaction_4001Text(View view) {
 		IParser parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
 				.getParser(
-						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Node_2001,
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4001,
 						view.getElement() != null ? view.getElement() : view,
 						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeNameEditPart.VISUAL_ID));
+								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramEditorPlugin
+					.getInstance().logError(
+							"Parser was not found for label " + 6001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getGraph_1000Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getProcess_2001Text(View view) {
+		IParser parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
+				.getParser(
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001,
+						view.getElement() != null ? view.getElement() : view,
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -177,30 +211,8 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	/**
 	 * @generated
 	 */
-	private String getGraph_1000Text(View view) {
+	private String getJoin_2002Text(View view) {
 		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getEdge_4001Text(View view) {
-		IParser parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
-				.getParser(
-						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Edge_4001,
-						view.getElement() != null ? view.getElement() : view,
-						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeValueEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramEditorPlugin
-					.getInstance().logError(
-							"Parser was not found for label " + 6001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
 	}
 
 	/**

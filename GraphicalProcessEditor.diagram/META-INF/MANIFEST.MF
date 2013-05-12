@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts, 
+Export-Package: GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts,
  GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part,
  GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

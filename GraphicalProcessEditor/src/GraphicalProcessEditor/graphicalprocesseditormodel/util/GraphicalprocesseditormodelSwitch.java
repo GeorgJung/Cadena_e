@@ -2,7 +2,11 @@
  */
 package GraphicalProcessEditor.graphicalprocesseditormodel.util;
 
-import GraphicalProcessEditor.graphicalprocesseditormodel.*;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
+import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Node;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -78,9 +82,23 @@ public class GraphicalprocesseditormodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case GraphicalprocesseditormodelPackage.EDGE: {
-				Edge edge = (Edge)theEObject;
-				T result = caseEdge(edge);
+			case GraphicalprocesseditormodelPackage.TRANSACTION: {
+				Transaction transaction = (Transaction)theEObject;
+				T result = caseTransaction(transaction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphicalprocesseditormodelPackage.JOIN: {
+				Join join = (Join)theEObject;
+				T result = caseJoin(join);
+				if (result == null) result = caseNode(join);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphicalprocesseditormodelPackage.PROCESS: {
+				GraphicalProcessEditor.graphicalprocesseditormodel.Process process = (GraphicalProcessEditor.graphicalprocesseditormodel.Process)theEObject;
+				T result = caseProcess(process);
+				if (result == null) result = caseNode(process);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -119,17 +137,47 @@ public class GraphicalprocesseditormodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Edge</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Transaction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Edge</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Transaction</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEdge(Edge object) {
+	public T caseTransaction(Transaction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Join</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Join</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJoin(Join object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Process</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Process</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcess(GraphicalProcessEditor.graphicalprocesseditormodel.Process object) {
 		return null;
 	}
 

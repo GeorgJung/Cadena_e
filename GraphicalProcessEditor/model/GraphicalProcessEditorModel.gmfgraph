@@ -11,47 +11,83 @@
         xsi:type="gmfgraph:PolylineDecoration"
         name="Arrow"/>
     <descriptors
-        name="NodeFigure">
+        name="TransactionFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="NodeFigure">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"/>
+          xsi:type="gmfgraph:PolylineConnection"
+          name="TransactionFigure"
+          targetDecoration="//@figures.0/@figures.0">
         <children
             xsi:type="gmfgraph:Label"
-            name="NodeNameFigure"
+            name="TransactionValueFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
-        name="EdgeFigure">
+        name="JoinFigure">
       <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="EdgeFigure"
-          targetDecoration="//@figures.0/@figures.0">
+          xsi:type="gmfgraph:Rectangle"
+          name="JoinFigure">
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+        <preferredSize
+            dx="5"
+            dy="50"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="ProcessFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="ProcessFigure">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="EdgeValueFigure"
+            name="ProcessNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ProcessStatesFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ProcessImagePathFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
     </descriptors>
   </figures>
   <nodes
-      name="Node"
-      figure="NodeFigure"/>
+      name="Join"
+      figure="JoinFigure"/>
+  <nodes
+      name="Process"
+      figure="ProcessFigure"/>
   <connections
-      name="Edge"
-      figure="EdgeFigure"/>
+      name="Transaction"
+      figure="TransactionFigure"/>
   <labels
-      name="NodeName"
-      figure="NodeFigure"
+      name="TransactionValue"
+      figure="TransactionFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
-      name="EdgeValue"
-      figure="EdgeFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+      name="ProcessName"
+      figure="ProcessFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels
+      name="ProcessStates"
+      figure="ProcessFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels
+      name="ProcessImagePath"
+      figure="ProcessFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.2"/>
 </gmfgraph:Canvas>

@@ -2,11 +2,12 @@
  */
 package GraphicalProcessEditor.graphicalprocesseditormodel.impl;
 
-import GraphicalProcessEditor.graphicalprocesseditormodel.Edge;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Node;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -41,7 +42,21 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass edgeEClass = null;
+	private EClass transactionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass joinEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass processEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -118,7 +133,7 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGraph_EReference0() {
+	public EReference getGraph_Processes() {
 		return (EReference)graphEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -154,8 +169,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNode_Name() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
+	public EReference getNode_Transactions() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -163,8 +178,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNode_Attribute() {
-		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
+	public EClass getTransaction() {
+		return transactionEClass;
 	}
 
 	/**
@@ -172,8 +187,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNode_Edges() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
+	public EAttribute getTransaction_Value() {
+		return (EAttribute)transactionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -181,8 +196,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEdge() {
-		return edgeEClass;
+	public EReference getTransaction_Source() {
+		return (EReference)transactionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -190,8 +205,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEdge_Value() {
-		return (EAttribute)edgeEClass.getEStructuralFeatures().get(0);
+	public EReference getTransaction_Target() {
+		return (EReference)transactionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -199,8 +214,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_Source() {
-		return (EReference)edgeEClass.getEStructuralFeatures().get(1);
+	public EClass getJoin() {
+		return joinEClass;
 	}
 
 	/**
@@ -208,8 +223,35 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEdge_Target() {
-		return (EReference)edgeEClass.getEStructuralFeatures().get(2);
+	public EClass getProcess() {
+		return processEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProcess_Name() {
+		return (EAttribute)processEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProcess_States() {
+		return (EAttribute)processEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProcess_ImagePath() {
+		return (EAttribute)processEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -241,19 +283,24 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 
 		// Create classes and their features
 		graphEClass = createEClass(GRAPH);
-		createEReference(graphEClass, GRAPH__EREFERENCE0);
+		createEReference(graphEClass, GRAPH__PROCESSES);
 		createEReference(graphEClass, GRAPH__START);
 		createEReference(graphEClass, GRAPH__END);
 
 		nodeEClass = createEClass(NODE);
-		createEAttribute(nodeEClass, NODE__NAME);
-		createEAttribute(nodeEClass, NODE__ATTRIBUTE);
-		createEReference(nodeEClass, NODE__EDGES);
+		createEReference(nodeEClass, NODE__TRANSACTIONS);
 
-		edgeEClass = createEClass(EDGE);
-		createEAttribute(edgeEClass, EDGE__VALUE);
-		createEReference(edgeEClass, EDGE__SOURCE);
-		createEReference(edgeEClass, EDGE__TARGET);
+		transactionEClass = createEClass(TRANSACTION);
+		createEAttribute(transactionEClass, TRANSACTION__VALUE);
+		createEReference(transactionEClass, TRANSACTION__SOURCE);
+		createEReference(transactionEClass, TRANSACTION__TARGET);
+
+		joinEClass = createEClass(JOIN);
+
+		processEClass = createEClass(PROCESS);
+		createEAttribute(processEClass, PROCESS__NAME);
+		createEAttribute(processEClass, PROCESS__STATES);
+		createEAttribute(processEClass, PROCESS__IMAGE_PATH);
 	}
 
 	/**
@@ -284,22 +331,29 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		joinEClass.getESuperTypes().add(this.getNode());
+		processEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(graphEClass, Graph.class, "Graph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGraph_EReference0(), this.getNode(), null, "EReference0", null, 1, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGraph_Processes(), this.getNode(), null, "Processes", null, 1, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraph_Start(), this.getNode(), null, "Start", null, 1, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGraph_End(), this.getNode(), null, "End", null, 1, -1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNode_Name(), ecorePackage.getEString(), "Name", null, 1, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getNode_Attribute(), ecorePackage.getEString(), "Attribute", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Edges(), this.getEdge(), null, "Edges", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNode_Transactions(), this.getTransaction(), null, "Transactions", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEdge_Value(), ecorePackage.getEString(), "Value", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEdge_Source(), this.getNode(), null, "Source", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEdge_Target(), this.getNode(), null, "Target", null, 1, 1, Edge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(transactionEClass, Transaction.class, "Transaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTransaction_Value(), ecorePackage.getEString(), "Value", null, 1, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransaction_Source(), this.getNode(), null, "Source", null, 1, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransaction_Target(), this.getNode(), null, "Target", null, 1, 1, Transaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(joinEClass, Join.class, "Join", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(processEClass, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, "Process", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProcess_Name(), ecorePackage.getEString(), "Name", null, 1, 1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcess_States(), ecorePackage.getEString(), "States", null, 0, -1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcess_ImagePath(), ecorePackage.getEString(), "ImagePath", null, 0, 1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

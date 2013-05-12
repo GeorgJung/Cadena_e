@@ -8,47 +8,60 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="GraphicalProcessEditorModel.ecore#//Graph/EReference0"/>
+        href="GraphicalProcessEditorModel.ecore#//Graph/Processes"/>
     <ownedChild>
       <domainMetaElement
-          href="GraphicalProcessEditorModel.ecore#//Node"/>
+          href="GraphicalProcessEditorModel.ecore#//Process"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="GraphicalProcessEditorModel.gmfgraph#NodeName"/>
+            href="GraphicalProcessEditorModel.gmfgraph#ProcessName"/>
         <features
-            href="GraphicalProcessEditorModel.ecore#//Node/Name"/>
+            href="GraphicalProcessEditorModel.ecore#//Process/Name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
-          href="GraphicalProcessEditorModel.gmfgraph#Node"/>
+          href="GraphicalProcessEditorModel.gmfgraph#Process"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="GraphicalProcessEditorModel.ecore#//Graph/Processes"/>
+    <ownedChild>
+      <domainMetaElement
+          href="GraphicalProcessEditorModel.ecore#//Join"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.1"/>
+      <diagramNode
+          href="GraphicalProcessEditorModel.gmfgraph#Join"/>
     </ownedChild>
   </nodes>
   <links>
     <domainMetaElement
-        href="GraphicalProcessEditorModel.ecore#//Edge"/>
+        href="GraphicalProcessEditorModel.ecore#//Transaction"/>
     <labelMappings
         xsi:type="gmfmap:FeatureLabelMapping">
       <diagramLabel
-          href="GraphicalProcessEditorModel.gmfgraph#EdgeValue"/>
+          href="GraphicalProcessEditorModel.gmfgraph#TransactionValue"/>
       <features
-          href="GraphicalProcessEditorModel.ecore#//Edge/Value"/>
+          href="GraphicalProcessEditorModel.ecore#//Transaction/Value"/>
     </labelMappings>
     <containmentFeature
-        href="GraphicalProcessEditorModel.ecore#//Node/Edges"/>
+        href="GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.1"/>
+        href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.2"/>
     <diagramLink
-        href="GraphicalProcessEditorModel.gmfgraph#Edge"/>
+        href="GraphicalProcessEditorModel.gmfgraph#Transaction"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="GraphicalProcessEditorModel.ecore#//Edge/Source"/>
+        href="GraphicalProcessEditorModel.ecore#//Transaction/Source"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="GraphicalProcessEditorModel.ecore#//Edge/Target"/>
+        href="GraphicalProcessEditorModel.ecore#//Transaction/Target"/>
   </links>
   <diagram>
     <diagramCanvas

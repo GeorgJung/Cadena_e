@@ -49,11 +49,15 @@ public class GraphicalProcessEditorModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_2001 = getElementType("GraphicalProcessEditor.diagram.Node_2001"); //$NON-NLS-1$
+	public static final IElementType Process_2001 = getElementType("GraphicalProcessEditor.diagram.Process_2001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Edge_4001 = getElementType("GraphicalProcessEditor.diagram.Edge_4001"); //$NON-NLS-1$
+	public static final IElementType Join_2002 = getElementType("GraphicalProcessEditor.diagram.Join_2002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Transaction_4001 = getElementType("GraphicalProcessEditor.diagram.Transaction_4001"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -172,14 +176,19 @@ public class GraphicalProcessEditorModelElementTypes {
 							.getGraph());
 
 			elements.put(
-					Node_2001,
+					Process_2001,
 					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-							.getNode());
+							.getProcess());
 
 			elements.put(
-					Edge_4001,
+					Join_2002,
 					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-							.getEdge());
+							.getJoin());
+
+			elements.put(
+					Transaction_4001,
+					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+							.getTransaction());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -198,8 +207,9 @@ public class GraphicalProcessEditorModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Graph_1000);
-			KNOWN_ELEMENT_TYPES.add(Node_2001);
-			KNOWN_ELEMENT_TYPES.add(Edge_4001);
+			KNOWN_ELEMENT_TYPES.add(Process_2001);
+			KNOWN_ELEMENT_TYPES.add(Join_2002);
+			KNOWN_ELEMENT_TYPES.add(Transaction_4001);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -211,10 +221,12 @@ public class GraphicalProcessEditorModelElementTypes {
 		switch (visualID) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return Graph_1000;
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-			return Node_2001;
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID:
-			return Edge_4001;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+			return Process_2001;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+			return Join_2002;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
+			return Transaction_4001;
 		}
 		return null;
 	}

@@ -17,14 +17,12 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -63,54 +61,8 @@ public class NodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addAttributePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Node_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Name_feature", "_UI_Node_type"),
-				 GraphicalprocesseditormodelPackage.Literals.NODE__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Attribute feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAttributePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Node_Attribute_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Node_Attribute_feature", "_UI_Node_type"),
-				 GraphicalprocesseditormodelPackage.Literals.NODE__ATTRIBUTE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -125,7 +77,7 @@ public class NodeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GraphicalprocesseditormodelPackage.Literals.NODE__EDGES);
+			childrenFeatures.add(GraphicalprocesseditormodelPackage.Literals.NODE__TRANSACTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -144,17 +96,6 @@ public class NodeItemProvider
 	}
 
 	/**
-	 * This returns Node.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Node"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -162,10 +103,7 @@ public class NodeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Node)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Node_type") :
-			getString("_UI_Node_type") + " " + label;
+		return getString("_UI_Node_type");
 	}
 
 	/**
@@ -180,11 +118,7 @@ public class NodeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Node.class)) {
-			case GraphicalprocesseditormodelPackage.NODE__NAME:
-			case GraphicalprocesseditormodelPackage.NODE__ATTRIBUTE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case GraphicalprocesseditormodelPackage.NODE__EDGES:
+			case GraphicalprocesseditormodelPackage.NODE__TRANSACTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,8 +138,8 @@ public class NodeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GraphicalprocesseditormodelPackage.Literals.NODE__EDGES,
-				 GraphicalprocesseditormodelFactory.eINSTANCE.createEdge()));
+				(GraphicalprocesseditormodelPackage.Literals.NODE__TRANSACTIONS,
+				 GraphicalprocesseditormodelFactory.eINSTANCE.createTransaction()));
 	}
 
 	/**

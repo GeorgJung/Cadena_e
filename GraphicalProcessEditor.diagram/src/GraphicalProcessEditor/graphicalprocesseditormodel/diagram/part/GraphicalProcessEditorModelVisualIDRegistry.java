@@ -120,8 +120,12 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		switch (containerVisualID) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getNode().isSuperTypeOf(domainElement.eClass())) {
-				return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID;
+					.getProcess().isSuperTypeOf(domainElement.eClass())) {
+				return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID;
+			}
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+					.getJoin().isSuperTypeOf(domainElement.eClass())) {
+				return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -152,17 +156,20 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID == nodeVisualID) {
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeNameEditPart.VISUAL_ID == nodeVisualID) {
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID:
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeValueEditPart.VISUAL_ID == nodeVisualID) {
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -178,8 +185,8 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 			return -1;
 		}
 		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-				.getEdge().isSuperTypeOf(domainElement.eClass())) {
-			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID;
+				.getTransaction().isSuperTypeOf(domainElement.eClass())) {
+			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -222,7 +229,8 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		switch (visualID) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return false;
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

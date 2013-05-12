@@ -248,22 +248,32 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Node1CreationTool_title;
+	public static String Transaction1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Node1CreationTool_desc;
+	public static String Transaction1CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Edge2CreationTool_title;
+	public static String Join2CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Edge2CreationTool_desc;
+	public static String Join2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Process3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Process3CreationTool_desc;
 
 	/**
 	 * @generated
@@ -273,12 +283,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Node_2001_incominglinks;
+	public static String NavigatorGroupName_Transaction_4001_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Node_2001_outgoinglinks;
+	public static String NavigatorGroupName_Transaction_4001_source;
 
 	/**
 	 * @generated
@@ -288,12 +298,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Edge_4001_target;
+	public static String NavigatorGroupName_Process_2001_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Edge_4001_source;
+	public static String NavigatorGroupName_Process_2001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Join_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Join_2002_outgoinglinks;
 
 	/**
 	 * @generated

@@ -95,49 +95,72 @@ public class GraphicalprocesseditormodelItemProviderAdapterFactory extends Graph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.Node} instances.
+	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NodeItemProvider nodeItemProvider;
+	protected TransactionItemProvider transactionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.Node}.
+	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createNodeAdapter() {
-		if (nodeItemProvider == null) {
-			nodeItemProvider = new NodeItemProvider(this);
+	public Adapter createTransactionAdapter() {
+		if (transactionItemProvider == null) {
+			transactionItemProvider = new TransactionItemProvider(this);
 		}
 
-		return nodeItemProvider;
+		return transactionItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge} instances.
+	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.Join} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EdgeItemProvider edgeItemProvider;
+	protected JoinItemProvider joinItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge}.
+	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.Join}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEdgeAdapter() {
-		if (edgeItemProvider == null) {
-			edgeItemProvider = new EdgeItemProvider(this);
+	public Adapter createJoinAdapter() {
+		if (joinItemProvider == null) {
+			joinItemProvider = new JoinItemProvider(this);
 		}
 
-		return edgeItemProvider;
+		return joinItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.Process} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ProcessItemProvider processItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.Process}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createProcessAdapter() {
+		if (processItemProvider == null) {
+			processItemProvider = new ProcessItemProvider(this);
+		}
+
+		return processItemProvider;
 	}
 
 	/**
@@ -240,8 +263,9 @@ public class GraphicalprocesseditormodelItemProviderAdapterFactory extends Graph
 	 */
 	public void dispose() {
 		if (graphItemProvider != null) graphItemProvider.dispose();
-		if (nodeItemProvider != null) nodeItemProvider.dispose();
-		if (edgeItemProvider != null) edgeItemProvider.dispose();
+		if (transactionItemProvider != null) transactionItemProvider.dispose();
+		if (joinItemProvider != null) joinItemProvider.dispose();
+		if (processItemProvider != null) processItemProvider.dispose();
 	}
 
 }

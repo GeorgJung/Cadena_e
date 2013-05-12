@@ -322,19 +322,19 @@ public class GraphicalProcessEditorModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canCreateEdge_4001(
+		public boolean canCreateTransaction_4001(
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node container,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node source,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node target) {
-			return canExistEdge_4001(container, null, source, target);
+			return canExistTransaction_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canExistEdge_4001(
+		public boolean canExistTransaction_4001(
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node container,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Edge linkInstance,
+				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction linkInstance,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node source,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node target) {
 			return true;

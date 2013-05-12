@@ -26,20 +26,24 @@ public class GraphicalProcessEditorModelEditPartFactory implements
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart(
 						view);
 
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeEditPart(
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart(
 						view);
 
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeNameEditPart(
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart(
 						view);
 
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeEditPart(
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart(
 						view);
 
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeValueEditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeValueEditPart(
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart(
 						view);
 
 			}

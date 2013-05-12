@@ -7,19 +7,23 @@
   <genPackages prefix="Graphicalprocesseditormodel" basePackage="GraphicalProcessEditor"
       disposableProviderFactory="true" ecorePackage="GraphicalProcessEditorModel.ecore#/">
     <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Graph">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/EReference0"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/Processes"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/Start"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Graph/End"/>
     </genClasses>
-    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Node">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Node/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Node/Attribute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Node/Edges"/>
+    <genClasses image="false" ecoreClass="GraphicalProcessEditorModel.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
     </genClasses>
-    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Edge">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Edge/Value"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Edge/Source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Edge/Target"/>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Transaction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Transaction/Value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Transaction/Source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Transaction/Target"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Join"/>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Process">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Process/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Process/States"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Process/ImagePath"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -22,39 +22,39 @@ public class GraphicalProcessEditorModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	private IParser nodeName_5001Parser;
+	private IParser processName_5001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getNodeName_5001Parser() {
-		if (nodeName_5001Parser == null) {
+	private IParser getProcessName_5001Parser() {
+		if (processName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getNode_Name() };
+					.getProcess_Name() };
 			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.parsers.MessageFormatParser parser = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.parsers.MessageFormatParser(
 					features);
-			nodeName_5001Parser = parser;
+			processName_5001Parser = parser;
 		}
-		return nodeName_5001Parser;
+		return processName_5001Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser edgeValue_6001Parser;
+	private IParser transactionValue_6001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEdgeValue_6001Parser() {
-		if (edgeValue_6001Parser == null) {
+	private IParser getTransactionValue_6001Parser() {
+		if (transactionValue_6001Parser == null) {
 			EAttribute[] features = new EAttribute[] { GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getEdge_Value() };
+					.getTransaction_Value() };
 			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.parsers.MessageFormatParser parser = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.parsers.MessageFormatParser(
 					features);
-			edgeValue_6001Parser = parser;
+			transactionValue_6001Parser = parser;
 		}
-		return edgeValue_6001Parser;
+		return transactionValue_6001Parser;
 	}
 
 	/**
@@ -62,10 +62,10 @@ public class GraphicalProcessEditorModelParserProvider extends AbstractProvider
 	 */
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
-			return getNodeName_5001Parser();
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.EdgeValueEditPart.VISUAL_ID:
-			return getEdgeValue_6001Parser();
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID:
+			return getProcessName_5001Parser();
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID:
+			return getTransactionValue_6001Parser();
 		}
 		return null;
 	}

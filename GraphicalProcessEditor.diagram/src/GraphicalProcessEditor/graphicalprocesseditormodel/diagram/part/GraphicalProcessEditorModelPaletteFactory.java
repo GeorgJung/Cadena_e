@@ -32,23 +32,24 @@ public class GraphicalProcessEditorModelPaletteFactory {
 		PaletteGroup paletteContainer = new PaletteGroup(
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Graphicalprocesseditormodel1Group_title);
 		paletteContainer.setId("createGraphicalprocesseditormodel1Group"); //$NON-NLS-1$
-		paletteContainer.add(createNode1CreationTool());
-		paletteContainer.add(createEdge2CreationTool());
+		paletteContainer.add(createTransaction1CreationTool());
+		paletteContainer.add(createJoin2CreationTool());
+		paletteContainer.add(createProcess3CreationTool());
 		return paletteContainer;
 	}
 
 	/**
 	 * @generated
 	 */
-	private ToolEntry createNode1CreationTool() {
-		NodeToolEntry entry = new NodeToolEntry(
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Node1CreationTool_title,
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Node1CreationTool_desc,
+	private ToolEntry createTransaction1CreationTool() {
+		LinkToolEntry entry = new LinkToolEntry(
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Transaction1CreationTool_title,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Transaction1CreationTool_desc,
 				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Node_2001));
-		entry.setId("createNode1CreationTool"); //$NON-NLS-1$
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4001));
+		entry.setId("createTransaction1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Node_2001));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -56,15 +57,31 @@ public class GraphicalProcessEditorModelPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEdge2CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Edge2CreationTool_title,
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Edge2CreationTool_desc,
+	private ToolEntry createJoin2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Join2CreationTool_title,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Join2CreationTool_desc,
 				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Edge_4001));
-		entry.setId("createEdge2CreationTool"); //$NON-NLS-1$
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002));
+		entry.setId("createJoin2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Edge_4001));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createProcess3CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Process3CreationTool_title,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Process3CreationTool_desc,
+				Collections
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001));
+		entry.setId("createProcess3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getEReference0 <em>EReference0</em>}</li>
+ *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getProcesses <em>Processes</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getStart <em>Start</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getEnd <em>End</em>}</li>
  * </ul>
@@ -26,20 +26,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Graph extends EObject {
 	/**
-	 * Returns the value of the '<em><b>EReference0</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Processes</b></em>' containment reference list.
 	 * The list contents are of type {@link GraphicalProcessEditor.graphicalprocesseditormodel.Node}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>EReference0</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Processes</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>EReference0</em>' containment reference list.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage#getGraph_EReference0()
+	 * @return the value of the '<em>Processes</em>' containment reference list.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage#getGraph_Processes()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Node> getEReference0();
+	EList<Node> getProcesses();
 
 	/**
 	 * Returns the value of the '<em><b>Start</b></em>' reference list.

@@ -66,13 +66,13 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	int GRAPH = 0;
 
 	/**
-	 * The feature id for the '<em><b>EReference0</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Processes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH__EREFERENCE0 = 0;
+	int GRAPH__PROCESSES = 0;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' reference list.
@@ -112,31 +112,13 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	int NODE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Transactions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Attribute</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__ATTRIBUTE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Edges</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__EDGES = 2;
+	int NODE__TRANSACTIONS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -145,17 +127,17 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 3;
+	int NODE_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.EdgeImpl <em>Edge</em>}' class.
+	 * The meta object id for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.TransactionImpl <em>Transaction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.EdgeImpl
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getEdge()
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.TransactionImpl
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getTransaction()
 	 * @generated
 	 */
-	int EDGE = 2;
+	int TRANSACTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -164,7 +146,7 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDGE__VALUE = 0;
+	int TRANSACTION__VALUE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -173,7 +155,7 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDGE__SOURCE = 1;
+	int TRANSACTION__SOURCE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -182,16 +164,99 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDGE__TARGET = 2;
+	int TRANSACTION__TARGET = 2;
 
 	/**
-	 * The number of structural features of the '<em>Edge</em>' class.
+	 * The number of structural features of the '<em>Transaction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDGE_FEATURE_COUNT = 3;
+	int TRANSACTION_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.JoinImpl <em>Join</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.JoinImpl
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getJoin()
+	 * @generated
+	 */
+	int JOIN = 3;
+
+	/**
+	 * The feature id for the '<em><b>Transactions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JOIN__TRANSACTIONS = NODE__TRANSACTIONS;
+
+	/**
+	 * The number of structural features of the '<em>Join</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JOIN_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl <em>Process</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getProcess()
+	 * @generated
+	 */
+	int PROCESS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Transactions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__TRANSACTIONS = NODE__TRANSACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__NAME = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__STATES = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__IMAGE_PATH = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Process</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
 
 
 	/**
@@ -205,15 +270,15 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	EClass getGraph();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getEReference0 <em>EReference0</em>}'.
+	 * Returns the meta object for the containment reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getProcesses <em>Processes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>EReference0</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getEReference0()
+	 * @return the meta object for the containment reference list '<em>Processes</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getProcesses()
 	 * @see #getGraph()
 	 * @generated
 	 */
-	EReference getGraph_EReference0();
+	EReference getGraph_Processes();
 
 	/**
 	 * Returns the meta object for the reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getStart <em>Start</em>}'.
@@ -248,80 +313,111 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	EClass getNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Node#getName <em>Name</em>}'.
+	 * Returns the meta object for the containment reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Node#getTransactions <em>Transactions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Node#getName()
+	 * @return the meta object for the containment reference list '<em>Transactions</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Node#getTransactions()
 	 * @see #getNode()
 	 * @generated
 	 */
-	EAttribute getNode_Name();
+	EReference getNode_Transactions();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Node#getAttribute <em>Attribute</em>}'.
+	 * Returns the meta object for class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction <em>Transaction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Attribute</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Node#getAttribute()
-	 * @see #getNode()
+	 * @return the meta object for class '<em>Transaction</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Transaction
 	 * @generated
 	 */
-	EAttribute getNode_Attribute();
+	EClass getTransaction();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Node#getEdges <em>Edges</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Edges</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Node#getEdges()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EReference getNode_Edges();
-
-	/**
-	 * Returns the meta object for class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge <em>Edge</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Edge</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Edge
-	 * @generated
-	 */
-	EClass getEdge();
-
-	/**
-	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Edge#getValue()
-	 * @see #getEdge()
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Transaction#getValue()
+	 * @see #getTransaction()
 	 * @generated
 	 */
-	EAttribute getEdge_Value();
+	EAttribute getTransaction_Value();
 
 	/**
-	 * Returns the meta object for the reference '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Edge#getSource()
-	 * @see #getEdge()
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Transaction#getSource()
+	 * @see #getTransaction()
 	 * @generated
 	 */
-	EReference getEdge_Source();
+	EReference getTransaction_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Edge#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Transaction#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Edge#getTarget()
-	 * @see #getEdge()
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Transaction#getTarget()
+	 * @see #getTransaction()
 	 * @generated
 	 */
-	EReference getEdge_Target();
+	EReference getTransaction_Target();
+
+	/**
+	 * Returns the meta object for class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Join <em>Join</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Join</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Join
+	 * @generated
+	 */
+	EClass getJoin();
+
+	/**
+	 * Returns the meta object for class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Process</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process
+	 * @generated
+	 */
+	EClass getProcess();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process#getName()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EAttribute getProcess_Name();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>States</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process#getStates()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EAttribute getProcess_States();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getImagePath <em>Image Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Image Path</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process#getImagePath()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EAttribute getProcess_ImagePath();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -356,12 +452,12 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		EClass GRAPH = eINSTANCE.getGraph();
 
 		/**
-		 * The meta object literal for the '<em><b>EReference0</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Processes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GRAPH__EREFERENCE0 = eINSTANCE.getGraph_EReference0();
+		EReference GRAPH__PROCESSES = eINSTANCE.getGraph_Processes();
 
 		/**
 		 * The meta object literal for the '<em><b>Start</b></em>' reference list feature.
@@ -390,38 +486,22 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		EClass NODE = eINSTANCE.getNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Transactions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NODE__NAME = eINSTANCE.getNode_Name();
+		EReference NODE__TRANSACTIONS = eINSTANCE.getNode_Transactions();
 
 		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' attribute list feature.
+		 * The meta object literal for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.TransactionImpl <em>Transaction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.TransactionImpl
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getTransaction()
 		 * @generated
 		 */
-		EAttribute NODE__ATTRIBUTE = eINSTANCE.getNode_Attribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Edges</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference NODE__EDGES = eINSTANCE.getNode_Edges();
-
-		/**
-		 * The meta object literal for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.EdgeImpl <em>Edge</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.EdgeImpl
-		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getEdge()
-		 * @generated
-		 */
-		EClass EDGE = eINSTANCE.getEdge();
+		EClass TRANSACTION = eINSTANCE.getTransaction();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -429,7 +509,7 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EDGE__VALUE = eINSTANCE.getEdge_Value();
+		EAttribute TRANSACTION__VALUE = eINSTANCE.getTransaction_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -437,7 +517,7 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EDGE__SOURCE = eINSTANCE.getEdge_Source();
+		EReference TRANSACTION__SOURCE = eINSTANCE.getTransaction_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -445,7 +525,51 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EDGE__TARGET = eINSTANCE.getEdge_Target();
+		EReference TRANSACTION__TARGET = eINSTANCE.getTransaction_Target();
+
+		/**
+		 * The meta object literal for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.JoinImpl <em>Join</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.JoinImpl
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getJoin()
+		 * @generated
+		 */
+		EClass JOIN = eINSTANCE.getJoin();
+
+		/**
+		 * The meta object literal for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl <em>Process</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getProcess()
+		 * @generated
+		 */
+		EClass PROCESS = eINSTANCE.getProcess();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCESS__NAME = eINSTANCE.getProcess_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCESS__STATES = eINSTANCE.getProcess_States();
+
+		/**
+		 * The meta object literal for the '<em><b>Image Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCESS__IMAGE_PATH = eINSTANCE.getProcess_ImagePath();
 
 	}
 
