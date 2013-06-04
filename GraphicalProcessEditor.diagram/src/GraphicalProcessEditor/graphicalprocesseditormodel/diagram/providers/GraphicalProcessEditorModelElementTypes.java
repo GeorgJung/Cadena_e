@@ -49,15 +49,33 @@ public class GraphicalProcessEditorModelElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Process_2001 = getElementType("GraphicalProcessEditor.diagram.Process_2001"); //$NON-NLS-1$
+	public static final IElementType Process_2002 = getElementType("GraphicalProcessEditor.diagram.Process_2002"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Join_2002 = getElementType("GraphicalProcessEditor.diagram.Join_2002"); //$NON-NLS-1$
+	public static final IElementType Join_2004 = getElementType("GraphicalProcessEditor.diagram.Join_2004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Transaction_4001 = getElementType("GraphicalProcessEditor.diagram.Transaction_4001"); //$NON-NLS-1$
+	public static final IElementType InputPort_3001 = getElementType("GraphicalProcessEditor.diagram.InputPort_3001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType OutputPort_3002 = getElementType("GraphicalProcessEditor.diagram.OutputPort_3002"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Transaction_4003 = getElementType("GraphicalProcessEditor.diagram.Transaction_4003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType InputPort_4004 = getElementType("GraphicalProcessEditor.diagram.InputPort_4004"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType OutputPort_4005 = getElementType("GraphicalProcessEditor.diagram.OutputPort_4005"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -176,19 +194,39 @@ public class GraphicalProcessEditorModelElementTypes {
 							.getGraph());
 
 			elements.put(
-					Process_2001,
+					Process_2002,
 					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 							.getProcess());
 
 			elements.put(
-					Join_2002,
+					Join_2004,
 					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 							.getJoin());
 
 			elements.put(
-					Transaction_4001,
+					InputPort_3001,
+					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+							.getInputPort());
+
+			elements.put(
+					OutputPort_3002,
+					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+							.getOutputPort());
+
+			elements.put(
+					Transaction_4003,
 					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 							.getTransaction());
+
+			elements.put(
+					InputPort_4004,
+					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+							.getInputPort());
+
+			elements.put(
+					OutputPort_4005,
+					GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+							.getOutputPort());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -207,9 +245,13 @@ public class GraphicalProcessEditorModelElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Graph_1000);
-			KNOWN_ELEMENT_TYPES.add(Process_2001);
-			KNOWN_ELEMENT_TYPES.add(Join_2002);
-			KNOWN_ELEMENT_TYPES.add(Transaction_4001);
+			KNOWN_ELEMENT_TYPES.add(Process_2002);
+			KNOWN_ELEMENT_TYPES.add(Join_2004);
+			KNOWN_ELEMENT_TYPES.add(InputPort_3001);
+			KNOWN_ELEMENT_TYPES.add(OutputPort_3002);
+			KNOWN_ELEMENT_TYPES.add(Transaction_4003);
+			KNOWN_ELEMENT_TYPES.add(InputPort_4004);
+			KNOWN_ELEMENT_TYPES.add(OutputPort_4005);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -222,11 +264,19 @@ public class GraphicalProcessEditorModelElementTypes {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return Graph_1000;
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
-			return Process_2001;
+			return Process_2002;
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-			return Join_2002;
+			return Join_2004;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
+			return InputPort_3001;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
+			return OutputPort_3002;
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
-			return Transaction_4001;
+			return Transaction_4003;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
+			return InputPort_4004;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			return OutputPort_4005;
 		}
 		return null;
 	}

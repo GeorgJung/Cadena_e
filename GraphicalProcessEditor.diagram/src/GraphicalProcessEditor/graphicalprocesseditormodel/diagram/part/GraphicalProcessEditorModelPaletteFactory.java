@@ -1,5 +1,6 @@
 package GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -42,14 +43,17 @@ public class GraphicalProcessEditorModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createTransaction1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(3);
+		types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003);
+		types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4004);
+		types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4005);
 		LinkToolEntry entry = new LinkToolEntry(
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Transaction1CreationTool_title,
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Transaction1CreationTool_desc,
-				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4001));
+				types);
 		entry.setId("createTransaction1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4001));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -62,10 +66,10 @@ public class GraphicalProcessEditorModelPaletteFactory {
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Join2CreationTool_title,
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Join2CreationTool_desc,
 				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002));
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2004));
 		entry.setId("createJoin2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -78,10 +82,10 @@ public class GraphicalProcessEditorModelPaletteFactory {
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Process3CreationTool_title,
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Process3CreationTool_desc,
 				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001));
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2002));
 		entry.setId("createProcess3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

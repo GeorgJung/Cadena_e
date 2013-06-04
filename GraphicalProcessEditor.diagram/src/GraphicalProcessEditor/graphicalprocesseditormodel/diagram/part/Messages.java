@@ -278,17 +278,42 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String ProcessProcessFigureCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Transaction_4001_target;
+	public static String NavigatorGroupName_Join_2004_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Transaction_4001_source;
+	public static String NavigatorGroupName_Join_2004_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Process_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Process_2002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_OutputPort_4005_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_OutputPort_4005_source;
 
 	/**
 	 * @generated
@@ -298,22 +323,52 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Process_2001_incominglinks;
+	public static String NavigatorGroupName_InputPort_3001_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Process_2001_outgoinglinks;
+	public static String NavigatorGroupName_InputPort_3001_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Join_2002_incominglinks;
+	public static String NavigatorGroupName_Transaction_4003_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Join_2002_outgoinglinks;
+	public static String NavigatorGroupName_Transaction_4003_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Transaction_4003_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Transaction_4003_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_InputPort_4004_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_InputPort_4004_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_OutputPort_3002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_OutputPort_3002_outgoinglinks;
 
 	/**
 	 * @generated

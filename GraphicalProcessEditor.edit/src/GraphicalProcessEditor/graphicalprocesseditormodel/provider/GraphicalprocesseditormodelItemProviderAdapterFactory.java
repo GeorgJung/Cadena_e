@@ -164,6 +164,52 @@ public class GraphicalprocesseditormodelItemProviderAdapterFactory extends Graph
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputPortItemProvider outputPortItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutputPortAdapter() {
+		if (outputPortItemProvider == null) {
+			outputPortItemProvider = new OutputPortItemProvider(this);
+		}
+
+		return outputPortItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link GraphicalProcessEditor.graphicalprocesseditormodel.InputPort} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InputPortItemProvider inputPortItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link GraphicalProcessEditor.graphicalprocesseditormodel.InputPort}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInputPortAdapter() {
+		if (inputPortItemProvider == null) {
+			inputPortItemProvider = new InputPortItemProvider(this);
+		}
+
+		return inputPortItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -266,6 +312,8 @@ public class GraphicalprocesseditormodelItemProviderAdapterFactory extends Graph
 		if (transactionItemProvider != null) transactionItemProvider.dispose();
 		if (joinItemProvider != null) joinItemProvider.dispose();
 		if (processItemProvider != null) processItemProvider.dispose();
+		if (outputPortItemProvider != null) outputPortItemProvider.dispose();
+		if (inputPortItemProvider != null) inputPortItemProvider.dispose();
 	}
 
 }

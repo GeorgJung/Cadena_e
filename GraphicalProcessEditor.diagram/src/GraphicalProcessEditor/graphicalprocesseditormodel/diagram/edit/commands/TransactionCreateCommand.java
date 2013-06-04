@@ -66,7 +66,7 @@ public class TransactionCreateCommand extends EditElementCommand {
 			return false;
 		}
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateTransaction_4001(getContainer(),
+				.getLinkConstraints().canCreateTransaction_4003(getContainer(),
 						getSource(), getTarget());
 	}
 

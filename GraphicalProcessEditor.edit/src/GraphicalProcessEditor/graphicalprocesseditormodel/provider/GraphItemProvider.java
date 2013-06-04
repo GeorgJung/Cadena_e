@@ -203,6 +203,16 @@ public class GraphItemProvider
 			(createChildParameter
 				(GraphicalprocesseditormodelPackage.Literals.GRAPH__PROCESSES,
 				 GraphicalprocesseditormodelFactory.eINSTANCE.createProcess()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GraphicalprocesseditormodelPackage.Literals.GRAPH__PROCESSES,
+				 GraphicalprocesseditormodelFactory.eINSTANCE.createOutputPort()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GraphicalprocesseditormodelPackage.Literals.GRAPH__PROCESSES,
+				 GraphicalprocesseditormodelFactory.eINSTANCE.createInputPort()));
 	}
 
 	/**

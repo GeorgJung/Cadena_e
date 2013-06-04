@@ -15,6 +15,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getName <em>Name</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getStates <em>States</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getImagePath <em>Image Path</em>}</li>
+ *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getOutputPorts <em>Output Ports</em>}</li>
+ *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getInputPort <em>Input Port</em>}</li>
  * </ul>
  * </p>
  *
@@ -90,5 +92,47 @@ public interface Process extends Node {
 	 * @generated
 	 */
 	void setImagePath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Output Ports</b></em>' containment reference list.
+	 * The list contents are of type {@link GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Output Ports</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Output Ports</em>' containment reference list.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage#getProcess_OutputPorts()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<OutputPort> getOutputPorts();
+
+	/**
+	 * Returns the value of the '<em><b>Input Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Input Port</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input Port</em>' containment reference.
+	 * @see #setInputPort(InputPort)
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage#getProcess_InputPort()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	InputPort getInputPort();
+
+	/**
+	 * Sets the value of the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getInputPort <em>Input Port</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Input Port</em>' containment reference.
+	 * @see #getInputPort()
+	 * @generated
+	 */
+	void setInputPort(InputPort value);
 
 } // Process

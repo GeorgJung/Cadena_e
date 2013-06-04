@@ -4,8 +4,10 @@ package GraphicalProcessEditor.graphicalprocesseditormodel.util;
 
 import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.InputPort;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Node;
+import GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.ecore.EObject;
@@ -102,6 +104,20 @@ public class GraphicalprocesseditormodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case GraphicalprocesseditormodelPackage.OUTPUT_PORT: {
+				OutputPort outputPort = (OutputPort)theEObject;
+				T result = caseOutputPort(outputPort);
+				if (result == null) result = caseNode(outputPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case GraphicalprocesseditormodelPackage.INPUT_PORT: {
+				InputPort inputPort = (InputPort)theEObject;
+				T result = caseInputPort(inputPort);
+				if (result == null) result = caseNode(inputPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -178,6 +194,36 @@ public class GraphicalprocesseditormodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProcess(GraphicalProcessEditor.graphicalprocesseditormodel.Process object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Output Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Output Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOutputPort(OutputPort object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputPort(InputPort object) {
 		return null;
 	}
 

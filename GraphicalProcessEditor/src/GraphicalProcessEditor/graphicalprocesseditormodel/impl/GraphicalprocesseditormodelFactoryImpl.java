@@ -5,7 +5,9 @@ package GraphicalProcessEditor.graphicalprocesseditormodel.impl;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.InputPort;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
+import GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.ecore.EClass;
@@ -64,6 +66,8 @@ public class GraphicalprocesseditormodelFactoryImpl extends EFactoryImpl impleme
 			case GraphicalprocesseditormodelPackage.TRANSACTION: return createTransaction();
 			case GraphicalprocesseditormodelPackage.JOIN: return createJoin();
 			case GraphicalprocesseditormodelPackage.PROCESS: return createProcess();
+			case GraphicalprocesseditormodelPackage.OUTPUT_PORT: return createOutputPort();
+			case GraphicalprocesseditormodelPackage.INPUT_PORT: return createInputPort();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -107,6 +111,26 @@ public class GraphicalprocesseditormodelFactoryImpl extends EFactoryImpl impleme
 	public GraphicalProcessEditor.graphicalprocesseditormodel.Process createProcess() {
 		ProcessImpl process = new ProcessImpl();
 		return process;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutputPort createOutputPort() {
+		OutputPortImpl outputPort = new OutputPortImpl();
+		return outputPort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputPort createInputPort() {
+		InputPortImpl inputPort = new InputPortImpl();
+		return inputPort;
 	}
 
 	/**

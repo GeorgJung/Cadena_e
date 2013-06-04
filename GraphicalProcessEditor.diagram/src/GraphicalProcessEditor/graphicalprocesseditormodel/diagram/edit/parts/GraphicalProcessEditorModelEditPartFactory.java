@@ -38,12 +38,32 @@ public class GraphicalProcessEditorModelEditPartFactory implements
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart(
 						view);
 
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart(
+						view);
+
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart(
 						view);
 
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID:
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart(
 						view);
 
 			}

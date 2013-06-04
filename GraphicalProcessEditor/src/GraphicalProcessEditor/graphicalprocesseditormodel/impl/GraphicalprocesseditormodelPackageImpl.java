@@ -5,8 +5,10 @@ package GraphicalProcessEditor.graphicalprocesseditormodel.impl;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Graph;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory;
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.InputPort;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Join;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Node;
+import GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort;
 import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -57,6 +59,20 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * @generated
 	 */
 	private EClass processEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass outputPortEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputPortEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -259,6 +275,42 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getProcess_OutputPorts() {
+		return (EReference)processEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcess_InputPort() {
+		return (EReference)processEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOutputPort() {
+		return outputPortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputPort() {
+		return inputPortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GraphicalprocesseditormodelFactory getGraphicalprocesseditormodelFactory() {
 		return (GraphicalprocesseditormodelFactory)getEFactoryInstance();
 	}
@@ -301,6 +353,12 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 		createEAttribute(processEClass, PROCESS__NAME);
 		createEAttribute(processEClass, PROCESS__STATES);
 		createEAttribute(processEClass, PROCESS__IMAGE_PATH);
+		createEReference(processEClass, PROCESS__OUTPUT_PORTS);
+		createEReference(processEClass, PROCESS__INPUT_PORT);
+
+		outputPortEClass = createEClass(OUTPUT_PORT);
+
+		inputPortEClass = createEClass(INPUT_PORT);
 	}
 
 	/**
@@ -333,6 +391,8 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 		// Add supertypes to classes
 		joinEClass.getESuperTypes().add(this.getNode());
 		processEClass.getESuperTypes().add(this.getNode());
+		outputPortEClass.getESuperTypes().add(this.getNode());
+		inputPortEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(graphEClass, Graph.class, "Graph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -354,6 +414,12 @@ public class GraphicalprocesseditormodelPackageImpl extends EPackageImpl impleme
 		initEAttribute(getProcess_Name(), ecorePackage.getEString(), "Name", null, 1, 1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcess_States(), ecorePackage.getEString(), "States", null, 0, -1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcess_ImagePath(), ecorePackage.getEString(), "ImagePath", null, 0, 1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcess_OutputPorts(), this.getOutputPort(), null, "OutputPorts", null, 0, -1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcess_InputPort(), this.getInputPort(), null, "InputPort", null, 1, 1, GraphicalProcessEditor.graphicalprocesseditormodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(outputPortEClass, OutputPort.class, "OutputPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(inputPortEClass, InputPort.class, "InputPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

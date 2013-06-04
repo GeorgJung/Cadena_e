@@ -21,12 +21,65 @@
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
         href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Graph"/>
+    <childNodes
+        visualID="3001"
+        editPartClassName="InputPortEditPart"
+        itemSemanticEditPolicyClassName="InputPortItemSemanticEditPolicy"
+        notationViewFactoryClassName="InputPortViewFactory"
+        canonicalEditPolicyClassName="InputPortCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="InputPortGraphicalNodeEditPolicy"
+        createCommandClassName="InputPortCreateCommand"
+        containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="InputPortEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:FigureViewmap"
+          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+      <modelFacet>
+        <metaClass
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/InputPort"/>
+        <containmentMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/InputPort"/>
+        <childMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/InputPort"/>
+      </modelFacet>
+    </childNodes>
+    <childNodes
+        visualID="3002"
+        editPartClassName="OutputPortEditPart"
+        itemSemanticEditPolicyClassName="OutputPortItemSemanticEditPolicy"
+        notationViewFactoryClassName="OutputPortViewFactory"
+        canonicalEditPolicyClassName="OutputPortCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="OutputPortGraphicalNodeEditPolicy"
+        createCommandClassName="OutputPortCreateCommand"
+        containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="OutputPortEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:FigureViewmap"
+          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+      <modelFacet>
+        <metaClass
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/OutputPort"/>
+        <containmentMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/OutputPorts"/>
+        <childMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/OutputPorts"/>
+      </modelFacet>
+    </childNodes>
     <topLevelNodes
-        visualID="2001"
+        visualID="2002"
         editPartClassName="ProcessEditPart"
         itemSemanticEditPolicyClassName="ProcessItemSemanticEditPolicy"
         notationViewFactoryClassName="ProcessViewFactory"
         canonicalEditPolicyClassName="ProcessCanonicalEditPolicy"
+        compartments="//@diagram/@compartments.0"
         graphicalNodeEditPolicyClassName="ProcessGraphicalNodeEditPolicy"
         createCommandClassName="ProcessCreateCommand">
       <diagramRunTimeClass
@@ -36,9 +89,8 @@
           editHelperClassName="ProcessEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
           className="ProcessFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ProcessFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureProcessNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureProcessStatesFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureProcessImagePathFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ProcessFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureProcessNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureProcessNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureProcessNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureProcessStatesFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureProcessStatesFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureProcessStatesFigure);&#xA;&#xA;&#xA;&#xA;fFigureProcessImagePathFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureProcessImagePathFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureProcessImagePathFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureProcessNameFigure() {&#xA;&#x9;&#x9;return fFigureProcessNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureProcessStatesFigure() {&#xA;&#x9;&#x9;return fFigureProcessStatesFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureProcessImagePathFigure() {&#xA;&#x9;&#x9;return fFigureProcessImagePathFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ProcessFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureProcessNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigureProcessCompartmentFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ProcessFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.BorderLayout layoutThis = new org.eclipse.draw2d.BorderLayout();&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureProcessNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureProcessNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureProcessNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureProcessCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#xA;this.add(fFigureProcessCompartmentFigure, org.eclipse.draw2d.BorderLayout.CENTER);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureProcessNameFigure() {&#xA;&#x9;&#x9;return fFigureProcessNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigureProcessCompartmentFigure() {&#xA;&#x9;&#x9;return fFigureProcessCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
             href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process"/>
@@ -68,7 +120,7 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2002"
+        visualID="2004"
         editPartClassName="JoinEditPart"
         itemSemanticEditPolicyClassName="JoinItemSemanticEditPolicy"
         notationViewFactoryClassName="JoinViewFactory"
@@ -83,9 +135,10 @@
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="JoinFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class JoinFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public JoinFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class JoinFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public JoinFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"
             fixedBackground="true"/>
         <attributes
             xsi:type="gmfgen:DefaultSizeAttributes"
@@ -102,7 +155,7 @@
       </modelFacet>
     </topLevelNodes>
     <links
-        visualID="4001"
+        visualID="4003"
         editPartClassName="TransactionEditPart"
         itemSemanticEditPolicyClassName="TransactionItemSemanticEditPolicy"
         notationViewFactoryClassName="TransactionViewFactory"
@@ -154,6 +207,84 @@
         </modelFacet>
       </labels>
     </links>
+    <links
+        visualID="4004"
+        editPartClassName="InputPort2EditPart"
+        itemSemanticEditPolicyClassName="InputPort2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="InputPortViewFactory"
+        createCommandClassName="InputPort2CreateCommand"
+        reorientCommandClassName="InputPortReorientCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.0/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="TransactionFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransactionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransactionValueFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransactionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransactionValueFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTransactionValueFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureTransactionValueFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransactionValueFigure() {&#xA;&#x9;&#x9;return fFigureTransactionValueFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet
+          xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/InputPort"/>
+        <containmentMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/InputPort"/>
+        <childMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/InputPort"/>
+        <sourceMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
+        <targetMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
+      </modelFacet>
+    </links>
+    <links
+        visualID="4005"
+        editPartClassName="OutputPort2EditPart"
+        itemSemanticEditPolicyClassName="OutputPort2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="OutputPortViewFactory"
+        createCommandClassName="OutputPort2CreateCommand"
+        reorientCommandClassName="OutputPortReorientCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@childNodes.1/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="TransactionFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransactionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransactionValueFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransactionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransactionValueFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTransactionValueFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureTransactionValueFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransactionValueFigure() {&#xA;&#x9;&#x9;return fFigureTransactionValueFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet
+          xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/OutputPort"/>
+        <containmentMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/OutputPorts"/>
+        <childMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/OutputPorts"/>
+        <sourceMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
+        <targetMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
+      </modelFacet>
+    </links>
+    <compartments
+        visualID="7001"
+        editPartClassName="ProcessProcessFigureCompartmentEditPart"
+        itemSemanticEditPolicyClassName="ProcessProcessFigureCompartmentItemSemanticEditPolicy"
+        notationViewFactoryClassName="ProcessProcessFigureCompartmentViewFactory"
+        canonicalEditPolicyClassName="ProcessProcessFigureCompartmentCanonicalEditPolicy"
+        childNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1"
+        title="ProcessFigureCompartment"
+        canCollapse="false"
+        needsTitle="false"
+        node="//@diagram/@topLevelNodes.0">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap
+          xsi:type="gmfgen:ParentAssignedViewmap"
+          getterName="getFigureProcessCompartmentFigure"
+          figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
     <palette>
       <groups
           title="graphicalprocesseditormodel">
@@ -161,7 +292,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="Transaction"
             description="Create new Transaction"
-            genLinks="//@diagram/@links.0"/>
+            genLinks="//@diagram/@links.0 //@diagram/@links.1 //@diagram/@links.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Join"
@@ -210,6 +341,12 @@
     <childReferences
         child="//@diagram"/>
     <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.0"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.0"
+        child="//@diagram/@childNodes.1"/>
+    <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.0"/>
     <childReferences
@@ -246,6 +383,30 @@
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
+        child="//@diagram/@childNodes.0"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.0"
+        child="//@diagram/@links.0"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@childNodes.1"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.1"
+        child="//@diagram/@links.0"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
         child="//@diagram/@topLevelNodes.0"
         referenceType="in_source"
         groupName="source"
@@ -265,6 +426,88 @@
     <childReferences
         parent="//@diagram/@topLevelNodes.1"
         child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@childNodes.0"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.0"
+        child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@childNodes.1"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@childNodes.1"
+        child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@links.1"
+        groupName="links"
+        groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
+        child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@links.1"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.1"
+        child="//@diagram/@links.0"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@links.1"
+        referenceType="out_target"
+        groupName="outgoing links"
+        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram"
+        child="//@diagram/@links.2"
+        groupName="links"
+        groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@links.0"
+        referenceType="out_target"
+        groupName="target"
+        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@links.2"
+        referenceType="in_source"
+        groupName="incoming links"
+        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.2"
+        child="//@diagram/@links.0"
+        referenceType="in_source"
+        groupName="source"
+        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences
+        parent="//@diagram/@links.0"
+        child="//@diagram/@links.2"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>

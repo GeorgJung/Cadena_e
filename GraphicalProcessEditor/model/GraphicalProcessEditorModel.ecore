@@ -27,5 +27,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="States" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ImagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="OutputPorts" upperBound="-1"
+        eType="#//OutputPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="InputPort" lowerBound="1"
+        eType="#//InputPort" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputPort" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputPort" eSuperTypes="#//Node"/>
 </ecore:EPackage>

@@ -46,12 +46,29 @@ public class ProcessCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process newElement = GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
 				.createProcess();
+
+		newElement
+				.getOutputPorts()
+				.add(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
+						.createOutputPort());
+		newElement
+				.getOutputPorts()
+				.add(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
+						.createOutputPort());
+		newElement
+				.getOutputPorts()
+				.add(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
+						.createOutputPort());
+
+		newElement
+				.setInputPort(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
+						.createInputPort());
 
 		GraphicalProcessEditor.graphicalprocesseditormodel.Graph owner = (GraphicalProcessEditor.graphicalprocesseditormodel.Graph) getElementToEdit();
 		owner.getProcesses().add(newElement);
