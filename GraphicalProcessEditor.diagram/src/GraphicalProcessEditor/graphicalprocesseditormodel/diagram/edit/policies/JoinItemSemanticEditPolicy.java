@@ -25,7 +25,7 @@ public class JoinItemSemanticEditPolicy
 	 */
 	public JoinItemSemanticEditPolicy() {
 		super(
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2004);
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002);
 	}
 
 	/**

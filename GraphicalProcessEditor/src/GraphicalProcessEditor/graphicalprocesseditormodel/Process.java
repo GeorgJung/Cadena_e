@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getName <em>Name</em>}</li>
- *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getStates <em>States</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getImagePath <em>Image Path</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getOutputPorts <em>Output Ports</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getInputPort <em>Input Port</em>}</li>
@@ -50,22 +49,6 @@ public interface Process extends Node {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>States</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>States</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>States</em>' attribute list.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage#getProcess_States()
-	 * @model
-	 * @generated
-	 */
-	EList<String> getStates();
 
 	/**
 	 * Returns the value of the '<em><b>Image Path</b></em>' attribute.

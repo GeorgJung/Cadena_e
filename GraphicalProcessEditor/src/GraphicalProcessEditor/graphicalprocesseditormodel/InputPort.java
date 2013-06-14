@@ -2,7 +2,6 @@
  */
 package GraphicalProcessEditor.graphicalprocesseditormodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->

@@ -72,7 +72,7 @@ public class InputPortReorientCommand extends EditElementCommand {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process container = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) getLink()
 				.eContainer();
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistInputPort_4004(container,
+				.getLinkConstraints().canExistInputPort_4001(container,
 						getLink(), getNewSource(), target);
 	}
 
@@ -94,7 +94,7 @@ public class InputPortReorientCommand extends EditElementCommand {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process container = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) getLink()
 				.eContainer();
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistInputPort_4004(container,
+				.getLinkConstraints().canExistInputPort_4001(container,
 						getLink(), source, getNewTarget());
 	}
 

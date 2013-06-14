@@ -66,7 +66,7 @@ public class InputPort2CreateCommand extends EditElementCommand {
 			return false;
 		}
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateInputPort_4004(getContainer(),
+				.getLinkConstraints().canCreateInputPort_4001(getContainer(),
 						getSource(), getTarget());
 	}
 

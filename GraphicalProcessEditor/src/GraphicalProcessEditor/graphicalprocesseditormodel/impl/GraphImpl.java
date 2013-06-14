@@ -8,6 +8,7 @@ import GraphicalProcessEditor.graphicalprocesseditormodel.Node;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -48,14 +50,14 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	protected EList<Node> processes;
 
 	/**
-	 * The cached value of the '{@link #getStart() <em>Start</em>}' reference list.
+	 * The cached value of the '{@link #getStart() <em>Start</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStart()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Node> start;
+	protected Node start;
 
 	/**
 	 * The cached value of the '{@link #getEnd() <em>End</em>}' reference list.
@@ -103,11 +105,37 @@ public class GraphImpl extends EObjectImpl implements Graph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Node> getStart() {
-		if (start == null) {
-			start = new EObjectResolvingEList<Node>(Node.class, this, GraphicalprocesseditormodelPackage.GRAPH__START);
+	public Node getStart() {
+		if (start != null && start.eIsProxy()) {
+			InternalEObject oldStart = (InternalEObject)start;
+			start = (Node)eResolveProxy(oldStart);
+			if (start != oldStart) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GraphicalprocesseditormodelPackage.GRAPH__START, oldStart, start));
+			}
 		}
 		return start;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node basicGetStart() {
+		return start;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStart(Node newStart) {
+		Node oldStart = start;
+		start = newStart;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphicalprocesseditormodelPackage.GRAPH__START, oldStart, start));
 	}
 
 	/**
@@ -147,7 +175,8 @@ public class GraphImpl extends EObjectImpl implements Graph {
 			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
 				return getProcesses();
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
-				return getStart();
+				if (resolve) return getStart();
+				return basicGetStart();
 			case GraphicalprocesseditormodelPackage.GRAPH__END:
 				return getEnd();
 		}
@@ -168,8 +197,7 @@ public class GraphImpl extends EObjectImpl implements Graph {
 				getProcesses().addAll((Collection<? extends Node>)newValue);
 				return;
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
-				getStart().clear();
-				getStart().addAll((Collection<? extends Node>)newValue);
+				setStart((Node)newValue);
 				return;
 			case GraphicalprocesseditormodelPackage.GRAPH__END:
 				getEnd().clear();
@@ -191,7 +219,7 @@ public class GraphImpl extends EObjectImpl implements Graph {
 				getProcesses().clear();
 				return;
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
-				getStart().clear();
+				setStart((Node)null);
 				return;
 			case GraphicalprocesseditormodelPackage.GRAPH__END:
 				getEnd().clear();
@@ -211,7 +239,7 @@ public class GraphImpl extends EObjectImpl implements Graph {
 			case GraphicalprocesseditormodelPackage.GRAPH__PROCESSES:
 				return processes != null && !processes.isEmpty();
 			case GraphicalprocesseditormodelPackage.GRAPH__START:
-				return start != null && !start.isEmpty();
+				return start != null;
 			case GraphicalprocesseditormodelPackage.GRAPH__END:
 				return end != null && !end.isEmpty();
 		}

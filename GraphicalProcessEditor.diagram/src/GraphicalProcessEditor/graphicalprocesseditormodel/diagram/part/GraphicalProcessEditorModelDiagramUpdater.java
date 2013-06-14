@@ -21,6 +21,14 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static boolean isShortcutOrphaned(View view) {
+		return !view.isSetElement() || view.getElement() == null
+				|| view.getElement().eIsProxy();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelNodeDescriptor> getSemanticChildren(
 			View view) {
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
@@ -114,19 +122,19 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return getGraph_1000ContainedLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
-			return getProcess_2002ContainedLinks(view);
+			return getProcess_2001ContainedLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-			return getJoin_2004ContainedLinks(view);
+			return getJoin_2002ContainedLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
 			return getInputPort_3001ContainedLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
 			return getOutputPort_3002ContainedLinks(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
+			return getInputPort_4001ContainedLinks(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			return getOutputPort_4002ContainedLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			return getTransaction_4003ContainedLinks(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
-			return getInputPort_4004ContainedLinks(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-			return getOutputPort_4005ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -139,19 +147,19 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
-			return getProcess_2002IncomingLinks(view);
+			return getProcess_2001IncomingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-			return getJoin_2004IncomingLinks(view);
+			return getJoin_2002IncomingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
 			return getInputPort_3001IncomingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
 			return getOutputPort_3002IncomingLinks(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
+			return getInputPort_4001IncomingLinks(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			return getOutputPort_4002IncomingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			return getTransaction_4003IncomingLinks(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
-			return getInputPort_4004IncomingLinks(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-			return getOutputPort_4005IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -164,19 +172,19 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
-			return getProcess_2002OutgoingLinks(view);
+			return getProcess_2001OutgoingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-			return getJoin_2004OutgoingLinks(view);
+			return getJoin_2002OutgoingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
 			return getInputPort_3001OutgoingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
 			return getOutputPort_3002OutgoingLinks(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
+			return getInputPort_4001OutgoingLinks(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			return getOutputPort_4002OutgoingLinks(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			return getTransaction_4003OutgoingLinks(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
-			return getInputPort_4004OutgoingLinks(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-			return getOutputPort_4005OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -192,21 +200,21 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getProcess_2002ContainedLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getProcess_2001ContainedLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) view
 				.getElement();
 		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_InputPort_4001(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_OutputPort_4002(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_Transaction_4003(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_InputPort_4004(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_OutputPort_4005(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getJoin_2004ContainedLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getJoin_2002ContainedLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Join modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Join) view
 				.getElement();
@@ -242,15 +250,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getTransaction_4003ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getInputPort_4004ContainedLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getInputPort_4001ContainedLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) view
 				.getElement();
@@ -262,7 +262,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutputPort_4005ContainedLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutputPort_4002ContainedLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) view
 				.getElement();
@@ -274,7 +274,15 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getProcess_2002IncomingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getTransaction_4003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getProcess_2001IncomingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) view
 				.getElement();
@@ -289,7 +297,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getJoin_2004IncomingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getJoin_2002IncomingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Join modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Join) view
 				.getElement();
@@ -334,24 +342,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getTransaction_4003IncomingLinks(
-			View view) {
-		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) view
-				.getElement();
-		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
-				.find(view.eResource().getResourceSet().getResources());
-		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_InputPort_4004(
-				modelElement, crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_OutputPort_4005(
-				modelElement, crossReferences));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getInputPort_4004IncomingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getInputPort_4001IncomingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) view
 				.getElement();
@@ -366,7 +357,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutputPort_4005IncomingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutputPort_4002IncomingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) view
 				.getElement();
@@ -381,7 +372,24 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getProcess_2002OutgoingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getTransaction_4003IncomingLinks(
+			View view) {
+		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) view
+				.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_InputPort_4001(
+				modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_OutputPort_4002(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getProcess_2001OutgoingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) view
 				.getElement();
@@ -393,7 +401,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getJoin_2004OutgoingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getJoin_2002OutgoingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Join modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Join) view
 				.getElement();
@@ -429,20 +437,7 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getTransaction_4003OutgoingLinks(
-			View view) {
-		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) view
-				.getElement();
-		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		result.addAll(getOutgoingTypeModelFacetLinks_InputPort_4004(modelElement));
-		result.addAll(getOutgoingTypeModelFacetLinks_OutputPort_4005(modelElement));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getInputPort_4004OutgoingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getInputPort_4001OutgoingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) view
 				.getElement();
@@ -454,12 +449,97 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutputPort_4005OutgoingLinks(
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutputPort_4002OutgoingLinks(
 			View view) {
 		GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) view
 				.getElement();
 		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_Transaction_4003(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getTransaction_4003OutgoingLinks(
+			View view) {
+		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction modelElement = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) view
+				.getElement();
+		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_InputPort_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_OutputPort_4002(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getContainedTypeModelFacetLinks_InputPort_4001(
+			GraphicalProcessEditor.graphicalprocesseditormodel.Process container) {
+		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort link = container
+				.getInputPort();
+		if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+				.getLinkWithClassVisualID(link)) {
+			return result;
+		}
+		List targets = link.getTransactions();
+		Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+		if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+			return result;
+		}
+		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
+		List sources = link.getTransactions();
+		Object theSource = sources.size() == 1 ? sources.get(0) : null;
+		if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+			return result;
+		}
+		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
+		result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
+				src,
+				dst,
+				link,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4001,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getContainedTypeModelFacetLinks_OutputPort_4002(
+			GraphicalProcessEditor.graphicalprocesseditormodel.Process container) {
+		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		for (Iterator<?> links = container.getOutputPorts().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) {
+				continue;
+			}
+			GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) linkObject;
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List targets = link.getTransactions();
+			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+			if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+				continue;
+			}
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
+			List sources = link.getTransactions();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+				continue;
+			}
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
+			result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
+					src,
+					dst,
+					link,
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002,
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID));
+		}
 		return result;
 	}
 
@@ -497,59 +577,24 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getContainedTypeModelFacetLinks_InputPort_4004(
-			GraphicalProcessEditor.graphicalprocesseditormodel.Process container) {
+	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getIncomingTypeModelFacetLinks_InputPort_4001(
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort link = container
-				.getInputPort();
-		if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-				.getLinkWithClassVisualID(link)) {
-			return result;
-		}
-		List targets = link.getTransactions();
-		Object theTarget = targets.size() == 1 ? targets.get(0) : null;
-		if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-			return result;
-		}
-		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
-		List sources = link.getTransactions();
-		Object theSource = sources.size() == 1 ? sources.get(0) : null;
-		if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-			return result;
-		}
-		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
-		result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
-				src,
-				dst,
-				link,
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4004,
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getContainedTypeModelFacetLinks_OutputPort_4005(
-			GraphicalProcessEditor.graphicalprocesseditormodel.Process container) {
-		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		for (Iterator<?> links = container.getOutputPorts().iterator(); links
-				.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) {
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+					.getNode_Transactions()
+					|| false == setting.getEObject() instanceof GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) {
 				continue;
 			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) linkObject;
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+			GraphicalProcessEditor.graphicalprocesseditormodel.InputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) setting
+					.getEObject();
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			List targets = link.getTransactions();
-			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
-			if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-				continue;
-			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
 			List sources = link.getTransactions();
 			Object theSource = sources.size() == 1 ? sources.get(0) : null;
 			if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
@@ -558,9 +603,46 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
 			result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
 					src,
-					dst,
+					target,
 					link,
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4005,
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4001,
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getIncomingTypeModelFacetLinks_OutputPort_4002(
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+					.getNode_Transactions()
+					|| false == setting.getEObject() instanceof GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) {
+				continue;
+			}
+			GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) setting
+					.getEObject();
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			List sources = link.getTransactions();
+			Object theSource = sources.size() == 1 ? sources.get(0) : null;
+			if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+				continue;
+			}
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
+			result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
+					src,
+					target,
+					link,
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002,
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID));
 		}
 		return result;
@@ -602,72 +684,102 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getIncomingTypeModelFacetLinks_InputPort_4004(
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
-		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getNode_Transactions()
-					|| false == setting.getEObject() instanceof GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) {
-				continue;
+	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutgoingTypeModelFacetLinks_InputPort_4001(
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source) {
+		GraphicalProcessEditor.graphicalprocesseditormodel.Process container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Process) {
+				container = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) element;
 			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.InputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.InputPort) setting
-					.getEObject();
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			List sources = link.getTransactions();
-			Object theSource = sources.size() == 1 ? sources.get(0) : null;
-			if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-				continue;
-			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
-			result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
-					src,
-					target,
-					link,
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4004,
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID));
 		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
+		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort link = container
+				.getInputPort();
+		if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+				.getLinkWithClassVisualID(link)) {
+			return result;
+		}
+		List targets = link.getTransactions();
+		Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+		if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+			return result;
+		}
+		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
+		List sources = link.getTransactions();
+		Object theSource = sources.size() == 1 ? sources.get(0) : null;
+		if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+			return result;
+		}
+		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
+		if (src != source) {
+			return result;
+		}
+		result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
+				src,
+				dst,
+				link,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4001,
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getIncomingTypeModelFacetLinks_OutputPort_4005(
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target,
-			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutgoingTypeModelFacetLinks_OutputPort_4002(
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source) {
+		GraphicalProcessEditor.graphicalprocesseditormodel.Process container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element
+				.eContainer()) {
+			if (element instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Process) {
+				container = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
 		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getNode_Transactions()
-					|| false == setting.getEObject() instanceof GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) {
+		for (Iterator<?> links = container.getOutputPorts().iterator(); links
+				.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) {
 				continue;
 			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) setting
-					.getEObject();
+			GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) linkObject;
 			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
+			List targets = link.getTransactions();
+			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+			if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
+				continue;
+			}
+			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
 			List sources = link.getTransactions();
 			Object theSource = sources.size() == 1 ? sources.get(0) : null;
 			if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
 				continue;
 			}
 			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
+			if (src != source) {
+				continue;
+			}
 			result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
 					src,
-					target,
+					dst,
 					link,
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4005,
+					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002,
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID));
 		}
 		return result;
@@ -716,110 +828,6 @@ public class GraphicalProcessEditorModelDiagramUpdater {
 					link,
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003,
 					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutgoingTypeModelFacetLinks_InputPort_4004(
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source) {
-		GraphicalProcessEditor.graphicalprocesseditormodel.Process container = null;
-		// Find container element for the link.
-		// Climb up by containment hierarchy starting from the source
-		// and return the first element that is instance of the container class.
-		for (EObject element = source; element != null && container == null; element = element
-				.eContainer()) {
-			if (element instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Process) {
-				container = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) element;
-			}
-		}
-		if (container == null) {
-			return Collections.emptyList();
-		}
-		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		GraphicalProcessEditor.graphicalprocesseditormodel.InputPort link = container
-				.getInputPort();
-		if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-				.getLinkWithClassVisualID(link)) {
-			return result;
-		}
-		List targets = link.getTransactions();
-		Object theTarget = targets.size() == 1 ? targets.get(0) : null;
-		if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-			return result;
-		}
-		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
-		List sources = link.getTransactions();
-		Object theSource = sources.size() == 1 ? sources.get(0) : null;
-		if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-			return result;
-		}
-		GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
-		if (src != source) {
-			return result;
-		}
-		result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
-				src,
-				dst,
-				link,
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4004,
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID));
-		return result;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static Collection<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> getOutgoingTypeModelFacetLinks_OutputPort_4005(
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source) {
-		GraphicalProcessEditor.graphicalprocesseditormodel.Process container = null;
-		// Find container element for the link.
-		// Climb up by containment hierarchy starting from the source
-		// and return the first element that is instance of the container class.
-		for (EObject element = source; element != null && container == null; element = element
-				.eContainer()) {
-			if (element instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Process) {
-				container = (GraphicalProcessEditor.graphicalprocesseditormodel.Process) element;
-			}
-		}
-		if (container == null) {
-			return Collections.emptyList();
-		}
-		LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor> result = new LinkedList<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor>();
-		for (Iterator<?> links = container.getOutputPorts().iterator(); links
-				.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) {
-				continue;
-			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort link = (GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort) linkObject;
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID != GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			List targets = link.getTransactions();
-			Object theTarget = targets.size() == 1 ? targets.get(0) : null;
-			if (false == theTarget instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-				continue;
-			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction dst = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theTarget;
-			List sources = link.getTransactions();
-			Object theSource = sources.size() == 1 ? sources.get(0) : null;
-			if (false == theSource instanceof GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) {
-				continue;
-			}
-			GraphicalProcessEditor.graphicalprocesseditormodel.Transaction src = (GraphicalProcessEditor.graphicalprocesseditormodel.Transaction) theSource;
-			if (src != source) {
-				continue;
-			}
-			result.add(new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelLinkDescriptor(
-					src,
-					dst,
-					link,
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4005,
-					GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID));
 		}
 		return result;
 	}

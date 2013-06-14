@@ -3,7 +3,6 @@ package GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts;
 import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.draw2d.ConnectionLocator;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Label;
 import org.eclipse.draw2d.geometry.Point;
@@ -19,9 +18,9 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserEditStatus;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.CompartmentEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.LabelEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.LabelDirectEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.l10n.DiagramColorRegistry;
 import org.eclipse.gmf.runtime.diagram.ui.label.ILabelDelegate;
@@ -48,13 +47,13 @@ import org.eclipse.swt.graphics.Image;
 /**
  * @generated
  */
-public class TransactionValueEditPart extends LabelEditPart implements
+public class OutputPortValueEditPart extends CompartmentEditPart implements
 		ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 6002;
+	public static final int VISUAL_ID = 5001;
 
 	/**
 	 * @generated
@@ -84,17 +83,7 @@ public class TransactionValueEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	static {
-		registerSnapBackPosition(
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-						.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID),
-				new Point(0, 40));
-	}
-
-	/**
-	 * @generated
-	 */
-	public TransactionValueEditPart(View view) {
+	public OutputPortValueEditPart(View view) {
 		super(view);
 	}
 
@@ -103,21 +92,14 @@ public class TransactionValueEditPart extends LabelEditPart implements
 	 */
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicy.DIRECT_EDIT_ROLE,
-				new LabelDirectEditPolicy());
 		installEditPolicy(
 				EditPolicy.SELECTION_FEEDBACK_ROLE,
 				new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelTextSelectionEditPolicy());
+		installEditPolicy(EditPolicy.DIRECT_EDIT_ROLE,
+				new LabelDirectEditPolicy());
 		installEditPolicy(
 				EditPolicy.PRIMARY_DRAG_ROLE,
-				new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.LinkLabelDragPolicy());
-	}
-
-	/**
-	 * @generated
-	 */
-	public int getKeyPoint() {
-		return ConnectionLocator.MIDDLE;
+				new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.NodeLabelDragPolicy());
 	}
 
 	/**
@@ -324,10 +306,10 @@ public class TransactionValueEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
 					.getParser(
-							GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003,
+							GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_3002,
 							getParserElement(),
 							GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-									.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID));
+									.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValueEditPart.VISUAL_ID));
 		}
 		return parser;
 	}
@@ -577,6 +559,22 @@ public class TransactionValueEditPart extends LabelEditPart implements
 			return getLabelDelegate();
 		}
 		return super.getAdapter(key);
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void addNotationalListeners() {
+		super.addNotationalListeners();
+		addListenerFilter("PrimaryView", this, getPrimaryView()); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void removeNotationalListeners() {
+		super.removeNotationalListeners();
+		removeListenerFilter("PrimaryView"); //$NON-NLS-1$
 	}
 
 	/**

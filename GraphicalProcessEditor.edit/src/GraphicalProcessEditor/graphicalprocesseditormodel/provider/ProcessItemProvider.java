@@ -60,7 +60,6 @@ public class ProcessItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addStatesPropertyDescriptor(object);
 			addImagePathPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -80,28 +79,6 @@ public class ProcessItemProvider
 				 getString("_UI_Process_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Process_Name_feature", "_UI_Process_type"),
 				 GraphicalprocesseditormodelPackage.Literals.PROCESS__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the States feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStatesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Process_States_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Process_States_feature", "_UI_Process_type"),
-				 GraphicalprocesseditormodelPackage.Literals.PROCESS__STATES,
 				 true,
 				 false,
 				 false,
@@ -201,7 +178,6 @@ public class ProcessItemProvider
 
 		switch (notification.getFeatureID(GraphicalProcessEditor.graphicalprocesseditormodel.Process.class)) {
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

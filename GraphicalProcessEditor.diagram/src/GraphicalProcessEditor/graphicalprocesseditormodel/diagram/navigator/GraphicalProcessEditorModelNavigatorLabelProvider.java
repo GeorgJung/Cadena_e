@@ -1,5 +1,6 @@
 package GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator;
 
+import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.common.ui.services.parser.IParser;
 import org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
@@ -68,6 +69,14 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 			return getImage(navigatorItem.getView());
 		}
 
+		// Due to plugin.xml content will be called only for "own" views
+		if (element instanceof IAdaptable) {
+			View view = (View) ((IAdaptable) element).getAdapter(View.class);
+			if (view != null && isOwnView(view)) {
+				return getImage(view);
+			}
+		}
+
 		return super.getImage(element);
 	}
 
@@ -77,27 +86,27 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	public Image getImage(View view) {
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?http://graphicalprocesseditormodel/1.0?InputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_3001); //$NON-NLS-1$
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Process", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2002); //$NON-NLS-1$
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?http://graphicalprocesseditormodel/1.0?OutputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4005); //$NON-NLS-1$
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?http://graphicalprocesseditormodel/1.0?OutputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_3002); //$NON-NLS-1$
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Join", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2004); //$NON-NLS-1$
+					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Process", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001); //$NON-NLS-1$
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://graphicalprocesseditormodel/1.0?Transaction", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003); //$NON-NLS-1$
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://graphicalprocesseditormodel/1.0?OutputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002); //$NON-NLS-1$
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?http://graphicalprocesseditormodel/1.0?Join", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002); //$NON-NLS-1$
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Link?http://graphicalprocesseditormodel/1.0?InputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4004); //$NON-NLS-1$
+					"Navigator?Link?http://graphicalprocesseditormodel/1.0?InputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4001); //$NON-NLS-1$
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://graphicalprocesseditormodel/1.0?InputPort", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_3001); //$NON-NLS-1$
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Diagram?http://graphicalprocesseditormodel/1.0?Graph", GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Graph_1000); //$NON-NLS-1$
@@ -145,6 +154,14 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 			return getText(navigatorItem.getView());
 		}
 
+		// Due to plugin.xml content will be called only for "own" views
+		if (element instanceof IAdaptable) {
+			View view = (View) ((IAdaptable) element).getAdapter(View.class);
+			if (view != null && isOwnView(view)) {
+				return getText(view);
+			}
+		}
+
 		return super.getText(element);
 	}
 
@@ -157,20 +174,20 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 		}
 		switch (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getVisualID(view)) {
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
-			return getInputPort_3001Text(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
-			return getProcess_2002Text(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-			return getOutputPort_4005Text(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
 			return getOutputPort_3002Text(view);
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-			return getJoin_2004Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
+			return getProcess_2001Text(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			return getTransaction_4003Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			return getOutputPort_4002Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+			return getJoin_2002Text(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
-			return getInputPort_4004Text(view);
+			return getInputPort_4001Text(view);
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
+			return getInputPort_3001Text(view);
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			return getGraph_1000Text(view);
 		}
@@ -180,20 +197,20 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	/**
 	 * @generated
 	 */
-	private String getJoin_2004Text(View view) {
+	private String getInputPort_4001Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 
 	/**
 	 * @generated
 	 */
-	private String getProcess_2002Text(View view) {
+	private String getOutputPort_3002Text(View view) {
 		IParser parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
 				.getParser(
-						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2002,
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_3002,
 						view.getElement() != null ? view.getElement() : view,
 						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID));
+								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValueEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
@@ -209,7 +226,7 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	/**
 	 * @generated
 	 */
-	private String getOutputPort_4005Text(View view) {
+	private String getJoin_2002Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 
@@ -223,8 +240,45 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	/**
 	 * @generated
 	 */
-	private String getInputPort_3001Text(View view) {
-		return ""; //$NON-NLS-1$
+	private String getProcess_2001Text(View view) {
+		IParser parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
+				.getParser(
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001,
+						view.getElement() != null ? view.getElement() : view,
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramEditorPlugin
+					.getInstance().logError(
+							"Parser was not found for label " + 5002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getOutputPort_4002Text(View view) {
+		IParser parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
+				.getParser(
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002,
+						view.getElement() != null ? view.getElement() : view,
+						GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
+								.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramEditorPlugin
+					.getInstance().logError(
+							"Parser was not found for label " + 6001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
@@ -244,7 +298,7 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 		} else {
 			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramEditorPlugin
 					.getInstance().logError(
-							"Parser was not found for label " + 6001); //$NON-NLS-1$
+							"Parser was not found for label " + 6002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -252,14 +306,7 @@ public class GraphicalProcessEditorModelNavigatorLabelProvider extends
 	/**
 	 * @generated
 	 */
-	private String getInputPort_4004Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getOutputPort_3002Text(View view) {
+	private String getInputPort_3001Text(View view) {
 		return ""; //$NON-NLS-1$
 	}
 

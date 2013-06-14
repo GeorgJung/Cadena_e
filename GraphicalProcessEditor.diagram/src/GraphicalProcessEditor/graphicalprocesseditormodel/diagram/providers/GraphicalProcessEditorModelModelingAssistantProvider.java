@@ -35,8 +35,8 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2002);
-			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2004);
+			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001);
+			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002);
 			return types;
 		}
 		if (editPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {

@@ -15,7 +15,7 @@ public class ProcessProcessFigureCompartmentItemSemanticEditPolicy
 	 */
 	public ProcessProcessFigureCompartmentItemSemanticEditPolicy() {
 		super(
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2002);
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001);
 	}
 
 	/**

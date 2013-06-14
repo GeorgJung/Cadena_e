@@ -66,7 +66,7 @@ public class OutputPort2CreateCommand extends EditElementCommand {
 			return false;
 		}
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canCreateOutputPort_4005(getContainer(),
+				.getLinkConstraints().canCreateOutputPort_4002(getContainer(),
 						getSource(), getTarget());
 	}
 

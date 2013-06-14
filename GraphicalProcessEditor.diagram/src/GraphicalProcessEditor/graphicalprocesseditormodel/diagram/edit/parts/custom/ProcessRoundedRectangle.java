@@ -20,6 +20,7 @@ public class ProcessRoundedRectangle extends RoundedRectangle{
 		graphics.setLineStyle(Graphics.LINE_SOLID);
 		graphics.setLineWidth(3);
 		Rectangle r = getBounds();
+		
 
 	};
 

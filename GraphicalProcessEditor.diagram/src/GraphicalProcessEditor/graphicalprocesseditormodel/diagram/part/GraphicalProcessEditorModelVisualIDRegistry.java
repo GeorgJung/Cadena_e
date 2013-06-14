@@ -102,7 +102,8 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		String containerModelID = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.MODEL_ID
-				.equals(containerModelID)) {
+				.equals(containerModelID)
+				&& !"graphicalprocesseditormodel".equals(containerModelID)) { //$NON-NLS-1$
 			return -1;
 		}
 		int containerVisualID;
@@ -149,7 +150,8 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		String containerModelID = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.MODEL_ID
-				.equals(containerModelID)) {
+				.equals(containerModelID)
+				&& !"graphicalprocesseditormodel".equals(containerModelID)) { //$NON-NLS-1$
 			return false;
 		}
 		int containerVisualID;
@@ -181,11 +183,21 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 				return true;
 			}
 			break;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValueEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart.VISUAL_ID:
 			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -206,16 +218,16 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 			return -1;
 		}
 		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-				.getTransaction().isSuperTypeOf(domainElement.eClass())) {
-			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID;
-		}
-		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 				.getInputPort().isSuperTypeOf(domainElement.eClass())) {
 			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID;
 		}
 		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 				.getOutputPort().isSuperTypeOf(domainElement.eClass())) {
 			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID;
+		}
+		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+				.getTransaction().isSuperTypeOf(domainElement.eClass())) {
+			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID;
 		}
 		return -1;
 	}

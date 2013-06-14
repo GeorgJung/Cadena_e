@@ -4,35 +4,43 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:trace="http://www.eclipse.org/gmf/2006/Trace">
   <nodeTraces
-      visualID="2002"
+      visualID="2001"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Process') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Graph') and _containmentMF_.name = 'Processes')">
     <nodeLabelTraces
-        visualID="5001"
+        visualID="5002"
         queryText="true"/>
     <compartmentTraces
         visualID="7001"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
-      visualID="2004"
+      visualID="2002"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Join') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Graph') and _containmentMF_.name = 'Processes')"/>
   <childNodeTraces
       visualID="3001"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'InputPort') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Process') and _containmentMF_.name = 'InputPort')"/>
   <childNodeTraces
       visualID="3002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'OutputPort') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Process') and _containmentMF_.name = 'OutputPorts')"/>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'OutputPort') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Process') and _containmentMF_.name = 'OutputPorts')">
+    <nodeLabelTraces
+        visualID="5001"
+        queryText="true"/>
+  </childNodeTraces>
   <linkTraces
-      visualID="4003"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Transaction')">
+      visualID="4001"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'InputPort')"/>
+  <linkTraces
+      visualID="4002"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'OutputPort')">
     <linkLabelTraces
         visualID="6001"
         queryText="true"/>
   </linkTraces>
   <linkTraces
-      visualID="4004"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'InputPort')"/>
-  <linkTraces
-      visualID="4005"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'OutputPort')"/>
+      visualID="4003"
+      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://graphicalprocesseditormodel/1.0' and _eClass_.name = 'Transaction')">
+    <linkLabelTraces
+        visualID="6002"
+        queryText="true"/>
+  </linkTraces>
 </trace:TraceModel>

@@ -48,13 +48,13 @@ import org.eclipse.swt.graphics.Image;
 /**
  * @generated
  */
-public class TransactionValueEditPart extends LabelEditPart implements
+public class OutputPortValue2EditPart extends LabelEditPart implements
 		ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 6002;
+	public static final int VISUAL_ID = 6001;
 
 	/**
 	 * @generated
@@ -87,14 +87,14 @@ public class TransactionValueEditPart extends LabelEditPart implements
 	static {
 		registerSnapBackPosition(
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-						.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID),
+						.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID),
 				new Point(0, 40));
 	}
 
 	/**
 	 * @generated
 	 */
-	public TransactionValueEditPart(View view) {
+	public OutputPortValue2EditPart(View view) {
 		super(view);
 	}
 
@@ -324,10 +324,10 @@ public class TransactionValueEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelParserProvider
 					.getParser(
-							GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003,
+							GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002,
 							getParserElement(),
 							GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
-									.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID));
+									.getType(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID));
 		}
 		return parser;
 	}

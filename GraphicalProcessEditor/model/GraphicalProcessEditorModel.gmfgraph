@@ -48,27 +48,35 @@
         <layout
             xsi:type="gmfgraph:BorderLayout"/>
         <children
-            xsi:type="gmfgraph:Label"
-            name="ProcessNameFigure"
-            text="&lt;...>"/>
-        <children
             xsi:type="gmfgraph:Rectangle"
             name="ProcessCompartmentFigure">
           <layoutData
               xsi:type="gmfgraph:BorderLayoutData"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="ProcessNameFigure"
+              text="&lt;...>"/>
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0/@children.0"/>
       <accessors
-          accessor="getFigureProcessCompartmentFigure"
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="OutputPortFigure">
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
-          name="OutputPortFigure"/>
+          name="OutputPortFigure">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="OutputPortValueFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="InputPortFigure">
@@ -103,10 +111,9 @@
   <labels
       name="ProcessName"
       figure="ProcessFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.0">
-    <facets
-        xsi:type="gmfgraph:LabelOffsetFacet"
-        x="100"
-        y="100"/>
-  </labels>
+      accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels
+      name="OutputPortValue"
+      figure="OutputPortFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
 </gmfgraph:Canvas>

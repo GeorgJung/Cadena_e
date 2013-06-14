@@ -7,8 +7,6 @@ import GraphicalProcessEditor.graphicalprocesseditormodel.InputPort;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.EObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Input Port</b></em>'.

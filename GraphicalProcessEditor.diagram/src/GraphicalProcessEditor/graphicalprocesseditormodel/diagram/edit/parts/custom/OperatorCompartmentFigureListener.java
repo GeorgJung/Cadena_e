@@ -44,16 +44,30 @@ public class OperatorCompartmentFigureListener implements FigureListener{
 			double yScale = ((double) figure.getSize().height - is.top - is.bottom) / REF_H;
  
 			// Set the constraints (bounds) for the rounded rectangle
+			List<AbstractEditPart> childs = compartmentEditPart.getChildren();
+			int factor;
+			
+			if(childs.size()>6)
+			{
+				factor = childs.size()-6;
+				
+			}
+			else
+			{
+				factor =0;
+				
+			}
+				
 			Rectangle constraint = new Rectangle(
 					(int) ((MARGIN + R) * xScale),
 					(int) ((MARGIN) * yScale), 
 					(int) (R * 4 * xScale),
-					(int) (R * 5 * yScale));
+					(int) (R *( 5 + factor )* yScale));
 			contentPane.setConstraint(roundedRectangle, constraint);
  
 			// Set the constraints for the input and output nodes
-			List<AbstractEditPart> childs = compartmentEditPart.getChildren();
-			int OutputsProcessed = 3;
+			
+			int OutputsProcessed = 0;
 			for (AbstractEditPart child : childs) {
 				if (child instanceof AbstractGraphicalEditPart) {
 					AbstractGraphicalEditPart gEditPart = (AbstractGraphicalEditPart) child;
@@ -70,17 +84,30 @@ public class OperatorCompartmentFigureListener implements FigureListener{
 					// Operator input ?
 					else if (gEditPart instanceof OutputPortEditPart) {
 						int num =0;
+						OutputsProcessed++;
 						if(OutputsProcessed == 3)
 						{
 							num = (int) ((MARGIN) * yScale);
 						}
 						else if(OutputsProcessed == 2)
 						{
-							num = (int) ((MARGIN + R * 2) * yScale);
+							num = (int) ((MARGIN + R * 4) * yScale);
+						}
+						else if(OutputsProcessed ==4)
+						{
+							num = (int) ((MARGIN + R * 1) * yScale);
+						}
+						else if(OutputsProcessed ==5)
+						{
+							num = (int) ((MARGIN + R * 3) * yScale);
+						}
+						else if(OutputsProcessed > 5)
+						{
+							num = (int) ((MARGIN + R * OutputsProcessed) * yScale);
 						}
 						else
 						{
-							num = (int) ((MARGIN + R * 4) * yScale);
+							num = (int) ((MARGIN + R * 2) * yScale);
 						}
 						constraint = new Rectangle(
 								(int) ((REF_W - MARGIN - R)* xScale),
@@ -88,11 +115,13 @@ public class OperatorCompartmentFigureListener implements FigureListener{
 								(int) (R * xScale), 
 								(int) (R * yScale));
 						contentPane.setConstraint(gEditPart.getFigure(), constraint);
-						OutputsProcessed--; // This boolean heps to know if we process the first or the seconde operator input
+						//OutputsProcessed--; // This boolean heps to know if we process the first or the seconde operator input
 					}
 				}
 			}
 		}
 	}
-
+	
+	
+	
 }

@@ -74,6 +74,10 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 	 */
 	protected boolean isOrphaned(Collection<EObject> semanticChildren,
 			final View view) {
+		if (isShortcut(view)) {
+			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
+					.isShortcutOrphaned(view);
+		}
 		return isMyDiagramElement(view)
 				&& !semanticChildren.contains(view.getElement());
 	}
@@ -91,6 +95,13 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 	/**
 	 * @generated
 	 */
+	private boolean isShortcut(View view) {
+		return view.getEAnnotation("Shortcut") != null; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
 	protected void refreshSemantic() {
 		if (resolveSemanticElement() == null) {
 			return;
@@ -99,9 +110,16 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 		List<GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelNodeDescriptor> childDescriptors = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
 				.getGraph_1000SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
-		// we care to check only views we recognize as ours
+		// we care to check only views we recognize as ours and not shortcuts
 		LinkedList<View> knownViewChildren = new LinkedList<View>();
 		for (View v : getViewChildren()) {
+			if (isShortcut(v)) {
+				if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
+						.isShortcutOrphaned(v)) {
+					orphaned.add(v);
+				}
+				continue;
+			}
 			if (isMyDiagramElement(v)) {
 				knownViewChildren.add(v);
 			}
@@ -252,7 +270,7 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getProcess_2002ContainedLinks(view));
+						.getProcess_2001ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -263,7 +281,7 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getJoin_2004ContainedLinks(view));
+						.getJoin_2002ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -293,21 +311,10 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getTransaction_4003ContainedLinks(view));
-			}
-			if (!domain2NotationMap.containsKey(view.getElement())
-					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
-				domain2NotationMap.put(view.getElement(), view);
-			}
-			break;
-		}
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getInputPort_4004ContainedLinks(view));
+						.getInputPort_4001ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -318,7 +325,18 @@ public class GraphCanonicalEditPolicy extends CanonicalEditPolicy {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
-						.getOutputPort_4005ContainedLinks(view));
+						.getOutputPort_4002ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelDiagramUpdater
+						.getTransaction_4003ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -30,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getName <em>Name</em>}</li>
- *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getStates <em>States</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getImagePath <em>Image Path</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getOutputPorts <em>Output Ports</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getInputPort <em>Input Port</em>}</li>
@@ -59,16 +57,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getStates() <em>States</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStates()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> states;
 
 	/**
 	 * The default value of the '{@link #getImagePath() <em>Image Path</em>}' attribute.
@@ -148,18 +136,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GraphicalprocesseditormodelPackage.PROCESS__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getStates() {
-		if (states == null) {
-			states = new EDataTypeUniqueEList<String>(String.class, this, GraphicalprocesseditormodelPackage.PROCESS__STATES);
-		}
-		return states;
 	}
 
 	/**
@@ -264,8 +240,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		switch (featureID) {
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				return getName();
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				return getStates();
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				return getImagePath();
 			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
@@ -287,10 +261,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		switch (featureID) {
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				setName((String)newValue);
-				return;
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				getStates().clear();
-				getStates().addAll((Collection<? extends String>)newValue);
 				return;
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				setImagePath((String)newValue);
@@ -317,9 +287,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				getStates().clear();
-				return;
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				setImagePath(IMAGE_PATH_EDEFAULT);
 				return;
@@ -343,8 +310,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		switch (featureID) {
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				return states != null && !states.isEmpty();
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				return IMAGE_PATH_EDEFAULT == null ? imagePath != null : !IMAGE_PATH_EDEFAULT.equals(imagePath);
 			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
@@ -367,8 +332,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", States: ");
-		result.append(states);
 		result.append(", ImagePath: ");
 		result.append(imagePath);
 		result.append(')');

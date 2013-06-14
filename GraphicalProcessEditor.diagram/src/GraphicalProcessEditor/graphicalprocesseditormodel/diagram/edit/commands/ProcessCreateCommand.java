@@ -26,6 +26,7 @@ public class ProcessCreateCommand extends EditElementCommand {
 
 	/**
 	 * FIXME: replace with setElementToEdit()
+	 * 
 	 * @generated
 	 */
 	protected EObject getElementToEdit() {
@@ -53,14 +54,6 @@ public class ProcessCreateCommand extends EditElementCommand {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Process newElement = GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
 				.createProcess();
 
-		newElement
-				.getOutputPorts()
-				.add(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
-						.createOutputPort());
-		newElement
-				.getOutputPorts()
-				.add(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE
-						.createOutputPort());
 		newElement
 				.getOutputPorts()
 				.add(GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelFactory.eINSTANCE

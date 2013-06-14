@@ -18,7 +18,7 @@ public class OutputPort2ItemSemanticEditPolicy
 	 */
 	public OutputPort2ItemSemanticEditPolicy() {
 		super(
-				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4005);
+				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002);
 	}
 
 	/**
