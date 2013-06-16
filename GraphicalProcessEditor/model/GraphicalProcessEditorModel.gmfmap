@@ -11,6 +11,19 @@
         href="GraphicalProcessEditorModel.ecore#//Graph/Processes"/>
     <ownedChild>
       <domainMetaElement
+          href="GraphicalProcessEditorModel.ecore#//Join"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.1"/>
+      <diagramNode
+          href="GraphicalProcessEditorModel.gmfgraph#Join"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="GraphicalProcessEditorModel.ecore#//Graph/Processes"/>
+    <ownedChild>
+      <domainMetaElement
           href="GraphicalProcessEditorModel.ecore#//Process"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
@@ -25,18 +38,21 @@
       <diagramNode
           href="GraphicalProcessEditorModel.gmfgraph#Process"/>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
+          compartment="//@nodes.1/@ownedChild/@compartments.0">
         <containmentFeature
             href="GraphicalProcessEditorModel.ecore#//Process/InputPort"/>
         <ownedChild>
           <domainMetaElement
               href="GraphicalProcessEditorModel.ecore#//InputPort"/>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.4"/>
           <diagramNode
               href="GraphicalProcessEditorModel.gmfgraph#InputPort"/>
         </ownedChild>
       </children>
       <children
-          compartment="//@nodes.0/@ownedChild/@compartments.0">
+          compartment="//@nodes.1/@ownedChild/@compartments.0">
         <containmentFeature
             href="GraphicalProcessEditorModel.ecore#//Process/OutputPorts"/>
         <ownedChild>
@@ -49,71 +65,20 @@
             <features
                 href="GraphicalProcessEditorModel.ecore#//OutputPort/Value"/>
           </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.3"/>
           <diagramNode
               href="GraphicalProcessEditorModel.gmfgraph#OutputPort"/>
         </ownedChild>
       </children>
       <compartments
-          children="//@nodes.0/@ownedChild/@children.0 //@nodes.0/@ownedChild/@children.1">
+          children="//@nodes.1/@ownedChild/@children.0 //@nodes.1/@ownedChild/@children.1">
         <compartment
             href="GraphicalProcessEditorModel.gmfgraph#ProcessFigureCompartment"/>
       </compartments>
     </ownedChild>
   </nodes>
-  <nodes>
-    <containmentFeature
-        href="GraphicalProcessEditorModel.ecore#//Graph/Processes"/>
-    <ownedChild>
-      <domainMetaElement
-          href="GraphicalProcessEditorModel.ecore#//Join"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.1"/>
-      <diagramNode
-          href="GraphicalProcessEditorModel.gmfgraph#Join"/>
-    </ownedChild>
-  </nodes>
-  <links>
-    <domainMetaElement
-        href="GraphicalProcessEditorModel.ecore#//InputPort"/>
-    <containmentFeature
-        href="GraphicalProcessEditorModel.ecore#//Process/InputPort"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.4"/>
-    <diagramLink
-        href="GraphicalProcessEditorModel.gmfgraph#Transaction"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="GraphicalProcessEditorModel.ecore#//OutputPort"/>
-    <labelMappings
-        xsi:type="gmfmap:FeatureLabelMapping">
-      <diagramLabel
-          href="GraphicalProcessEditorModel.gmfgraph#OutputPortValue"/>
-      <features
-          href="GraphicalProcessEditorModel.ecore#//OutputPort/Value"/>
-    </labelMappings>
-    <containmentFeature
-        href="GraphicalProcessEditorModel.ecore#//Process/OutputPorts"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.0"/>
-    <diagramLink
-        href="GraphicalProcessEditorModel.gmfgraph#Transaction"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
-  </links>
   <links>
     <domainMetaElement
         href="GraphicalProcessEditorModel.ecore#//Transaction"/>
@@ -128,7 +93,7 @@
         href="GraphicalProcessEditorModel.ecore#//Node/Transactions"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.1"/>
+        href="GraphicalProcessEditorModel.gmftool#//@palette/@tools.0/@tools.0"/>
     <diagramLink
         href="GraphicalProcessEditorModel.gmfgraph#Transaction"/>
     <sourceMetaFeature

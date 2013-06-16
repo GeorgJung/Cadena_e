@@ -96,9 +96,6 @@ public class GraphicalProcessEditorModelNavigatorLinkHelper implements
 			if (navigatorGroup.getParent() instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorItem) {
 				navigatorView = ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.navigator.GraphicalProcessEditorModelNavigatorItem) navigatorGroup
 						.getParent()).getView();
-			} else if (navigatorGroup.getParent() instanceof IAdaptable) {
-				navigatorView = (View) ((IAdaptable) navigatorGroup.getParent())
-						.getAdapter(View.class);
 			}
 		}
 		if (navigatorView == null) {

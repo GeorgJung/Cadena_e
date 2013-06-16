@@ -32,6 +32,11 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
+import GraphicalProcessEditor.graphicalprocesseditormodel.InputPort;
+import GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Process;
+import GraphicalProcessEditor.graphicalprocesseditormodel.Transaction;
+
 /**
  * @generated
  */
@@ -322,58 +327,11 @@ public class GraphicalProcessEditorModelBaseItemSemanticEditPolicy extends
 		/**
 		 * @generated
 		 */
-		public boolean canCreateInputPort_4001(
-				GraphicalProcessEditor.graphicalprocesseditormodel.Process container,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target) {
-			if (container != null) {
-				if (container.getInputPort() != null) {
-					return false;
-				}
-			}
-			return canExistInputPort_4001(container, null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateOutputPort_4002(
-				GraphicalProcessEditor.graphicalprocesseditormodel.Process container,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target) {
-			return canExistOutputPort_4002(container, null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
 		public boolean canCreateTransaction_4003(
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node container,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node source,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node target) {
 			return canExistTransaction_4003(container, null, source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistInputPort_4001(
-				GraphicalProcessEditor.graphicalprocesseditormodel.Process container,
-				GraphicalProcessEditor.graphicalprocesseditormodel.InputPort linkInstance,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistOutputPort_4002(
-				GraphicalProcessEditor.graphicalprocesseditormodel.Process container,
-				GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort linkInstance,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction source,
-				GraphicalProcessEditor.graphicalprocesseditormodel.Transaction target) {
-			return true;
 		}
 
 		/**
@@ -385,6 +343,30 @@ public class GraphicalProcessEditorModelBaseItemSemanticEditPolicy extends
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node source,
 				GraphicalProcessEditor.graphicalprocesseditormodel.Node target) {
 			return true;
+		}
+
+		public boolean canCreateInputPort_4001(Process container,
+				Transaction source, Transaction target) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		public boolean canExistInputPort_4001(Process container,
+				InputPort link, Transaction newSource, Transaction target) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		public boolean canCreateOutputPort_4002(Process container,
+				Transaction source, Transaction target) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		public boolean canExistOutputPort_4002(Process container,
+				OutputPort link, Transaction newSource, Transaction target) {
+			// TODO Auto-generated method stub
+			return false;
 		}
 	}
 

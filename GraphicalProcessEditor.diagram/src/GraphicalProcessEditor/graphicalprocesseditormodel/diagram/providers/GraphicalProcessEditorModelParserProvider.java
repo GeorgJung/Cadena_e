@@ -60,25 +60,6 @@ public class GraphicalProcessEditorModelParserProvider extends AbstractProvider
 	/**
 	 * @generated
 	 */
-	private IParser outputPortValue_6001Parser;
-
-	/**
-	 * @generated
-	 */
-	private IParser getOutputPortValue_6001Parser() {
-		if (outputPortValue_6001Parser == null) {
-			EAttribute[] features = new EAttribute[] { GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getOutputPort_Value() };
-			GraphicalProcessEditor.graphicalprocesseditormodel.diagram.parsers.MessageFormatParser parser = new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.parsers.MessageFormatParser(
-					features);
-			outputPortValue_6001Parser = parser;
-		}
-		return outputPortValue_6001Parser;
-	}
-
-	/**
-	 * @generated
-	 */
 	private IParser transactionValue_6002Parser;
 
 	/**
@@ -104,8 +85,6 @@ public class GraphicalProcessEditorModelParserProvider extends AbstractProvider
 			return getProcessName_5002Parser();
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValueEditPart.VISUAL_ID:
 			return getOutputPortValue_5001Parser();
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID:
-			return getOutputPortValue_6001Parser();
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID:
 			return getTransactionValue_6002Parser();
 		}

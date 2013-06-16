@@ -308,16 +308,6 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_InputPort_4001_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_InputPort_4001_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_OutputPort_3002_incominglinks;
 
 	/**
@@ -349,16 +339,6 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Process_2001_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_OutputPort_4002_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_OutputPort_4002_outgoinglinks;
 
 	/**
 	 * @generated

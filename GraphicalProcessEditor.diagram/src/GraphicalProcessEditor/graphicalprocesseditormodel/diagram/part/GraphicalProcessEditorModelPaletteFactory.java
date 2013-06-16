@@ -48,10 +48,10 @@ public class GraphicalProcessEditorModelPaletteFactory {
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Transaction1CreationTool_title,
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.Transaction1CreationTool_desc,
 				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002));
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003));
 		entry.setId("createTransaction1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_4002));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Transaction_4003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -92,12 +92,15 @@ public class GraphicalProcessEditorModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createOutputPort4CreationTool() {
-		ToolEntry entry = new ToolEntry(
+		NodeToolEntry entry = new NodeToolEntry(
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.OutputPort4CreationTool_title,
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.OutputPort4CreationTool_desc,
-				null, null) {
-		};
+				Collections
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_3002));
 		entry.setId("createOutputPort4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
 
@@ -105,14 +108,14 @@ public class GraphicalProcessEditorModelPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createInputPort5CreationTool() {
-		LinkToolEntry entry = new LinkToolEntry(
+		NodeToolEntry entry = new NodeToolEntry(
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.InputPort5CreationTool_title,
 				GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.Messages.InputPort5CreationTool_desc,
 				Collections
-						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4001));
+						.singletonList(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_3001));
 		entry.setId("createInputPort5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes
-				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_4001));
+				.getImageDescriptor(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_3001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

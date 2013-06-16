@@ -102,8 +102,7 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		String containerModelID = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.MODEL_ID
-				.equals(containerModelID)
-				&& !"graphicalprocesseditormodel".equals(containerModelID)) { //$NON-NLS-1$
+				.equals(containerModelID)) {
 			return -1;
 		}
 		int containerVisualID;
@@ -121,12 +120,12 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		switch (containerVisualID) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
 			if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-					.getProcess().isSuperTypeOf(domainElement.eClass())) {
-				return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID;
-			}
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 					.getJoin().isSuperTypeOf(domainElement.eClass())) {
 				return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID;
+			}
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
+					.getProcess().isSuperTypeOf(domainElement.eClass())) {
+				return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID;
 			}
 			break;
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart.VISUAL_ID:
@@ -150,8 +149,7 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		String containerModelID = GraphicalProcessEditor.graphicalprocesseditormodel.diagram.part.GraphicalProcessEditorModelVisualIDRegistry
 				.getModelID(containerView);
 		if (!GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.MODEL_ID
-				.equals(containerModelID)
-				&& !"graphicalprocesseditormodel".equals(containerModelID)) { //$NON-NLS-1$
+				.equals(containerModelID)) {
 			return false;
 		}
 		int containerVisualID;
@@ -168,10 +166,10 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 		}
 		switch (containerVisualID) {
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart.VISUAL_ID:
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID == nodeVisualID) {
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID == nodeVisualID) {
+			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -196,11 +194,6 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 				return true;
 			}
 			break;
-		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
 			if (GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionValueEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -216,14 +209,6 @@ public class GraphicalProcessEditorModelVisualIDRegistry {
 	public static int getLinkWithClassVisualID(EObject domainElement) {
 		if (domainElement == null) {
 			return -1;
-		}
-		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-				.getInputPort().isSuperTypeOf(domainElement.eClass())) {
-			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID;
-		}
-		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
-				.getOutputPort().isSuperTypeOf(domainElement.eClass())) {
-			return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID;
 		}
 		if (GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage.eINSTANCE
 				.getTransaction().isSuperTypeOf(domainElement.eClass())) {

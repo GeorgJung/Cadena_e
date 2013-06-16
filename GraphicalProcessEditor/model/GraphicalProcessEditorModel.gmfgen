@@ -19,8 +19,6 @@
     <viewmap
         xsi:type="gmfgen:FigureViewmap"
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
-    <containsShortcutsTo>graphicalprocesseditormodel</containsShortcutsTo>
-    <shortcutsProvidedFor>graphicalprocesseditormodel</shortcutsProvidedFor>
     <domainDiagramElement
         href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Graph"/>
     <childNodes
@@ -97,6 +95,41 @@
       </labels>
     </childNodes>
     <topLevelNodes
+        visualID="2002"
+        editPartClassName="JoinEditPart"
+        itemSemanticEditPolicyClassName="JoinItemSemanticEditPolicy"
+        notationViewFactoryClassName="JoinViewFactory"
+        canonicalEditPolicyClassName="JoinCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="JoinGraphicalNodeEditPolicy"
+        createCommandClassName="JoinCreateCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="JoinEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="JoinFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class JoinFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public JoinFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="5"
+            height="50"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Join"/>
+        <containmentMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Graph/Processes"/>
+        <childMetaFeature
+            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Graph/Processes"/>
+      </modelFacet>
+    </topLevelNodes>
+    <topLevelNodes
         visualID="2001"
         editPartClassName="ProcessEditPart"
         itemSemanticEditPolicyClassName="ProcessItemSemanticEditPolicy"
@@ -142,124 +175,6 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes
-        visualID="2002"
-        editPartClassName="JoinEditPart"
-        itemSemanticEditPolicyClassName="JoinItemSemanticEditPolicy"
-        notationViewFactoryClassName="JoinViewFactory"
-        canonicalEditPolicyClassName="JoinCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="JoinGraphicalNodeEditPolicy"
-        createCommandClassName="JoinCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="JoinEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="JoinFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class JoinFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public JoinFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedForeground="true"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:DefaultSizeAttributes"
-            width="5"
-            height="50"/>
-      </viewmap>
-      <modelFacet>
-        <metaClass
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Join"/>
-        <containmentMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Graph/Processes"/>
-        <childMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Graph/Processes"/>
-      </modelFacet>
-    </topLevelNodes>
-    <links
-        visualID="4001"
-        editPartClassName="InputPort2EditPart"
-        itemSemanticEditPolicyClassName="InputPort2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="InputPortViewFactory"
-        createCommandClassName="InputPort2CreateCommand"
-        reorientCommandClassName="InputPortReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.0/@elementType"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="TransactionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransactionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransactionValueFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransactionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransactionValueFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTransactionValueFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureTransactionValueFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransactionValueFigure() {&#xA;&#x9;&#x9;return fFigureTransactionValueFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
-      <modelFacet
-          xsi:type="gmfgen:TypeLinkModelFacet">
-        <metaClass
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/InputPort"/>
-        <containmentMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/InputPort"/>
-        <childMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/InputPort"/>
-        <sourceMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
-        <targetMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
-      </modelFacet>
-    </links>
-    <links
-        visualID="4002"
-        editPartClassName="OutputPort2EditPart"
-        itemSemanticEditPolicyClassName="OutputPort2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="OutputPortViewFactory"
-        createCommandClassName="OutputPort2CreateCommand"
-        reorientCommandClassName="OutputPortReorientCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
-      <elementType
-          xsi:type="gmfgen:SpecializationType"
-          metamodelType="//@diagram/@childNodes.1/@elementType"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="TransactionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TransactionFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTransactionValueFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TransactionFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;createContents();&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTransactionValueFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTransactionValueFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureTransactionValueFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTransactionValueFigure() {&#xA;&#x9;&#x9;return fFigureTransactionValueFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
-      <modelFacet
-          xsi:type="gmfgen:TypeLinkModelFacet">
-        <metaClass
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/OutputPort"/>
-        <containmentMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/OutputPorts"/>
-        <childMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Process/OutputPorts"/>
-        <sourceMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
-        <targetMetaFeature
-            href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/Node/Transactions"/>
-      </modelFacet>
-      <labels
-          visualID="6001"
-          editPartClassName="OutputPortValue2EditPart"
-          itemSemanticEditPolicyClassName="OutputPortValue2ItemSemanticEditPolicy"
-          notationViewFactoryClassName="OutputPortValueViewFactory"
-          elementIcon="true">
-        <diagramRunTimeClass
-            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap
-            xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureOutputPortValueFigure"
-            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
-          <attributes
-              xsi:type="gmfgen:LabelOffsetAttributes"
-              y="40"/>
-        </viewmap>
-        <modelFacet
-            xsi:type="gmfgen:FeatureLabelModelFacet"
-            parser="//@labelParsers/@implementations.0">
-          <metaFeatures
-              href="GraphicalProcessEditorModel.genmodel#//graphicalprocesseditormodel/OutputPort/Value"/>
-        </modelFacet>
-      </labels>
-    </links>
     <links
         visualID="4003"
         editPartClassName="TransactionEditPart"
@@ -323,7 +238,7 @@
         title="ProcessFigureCompartment"
         canCollapse="false"
         needsTitle="false"
-        node="//@diagram/@topLevelNodes.0">
+        node="//@diagram/@topLevelNodes.1">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
@@ -338,27 +253,27 @@
             xsi:type="gmfgen:ToolEntry"
             title="Transaction"
             description="Create new Transaction"
-            genLinks="//@diagram/@links.1"/>
+            genLinks="//@diagram/@links.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Join"
             description="Create new Join"
-            genNodes="//@diagram/@topLevelNodes.1"
-            genLinks="//@diagram/@links.2"/>
+            genNodes="//@diagram/@topLevelNodes.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Process"
             description="Create new Process"
-            genNodes="//@diagram/@topLevelNodes.0"/>
+            genNodes="//@diagram/@topLevelNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="OutputPort"
-            description="Create new OutputPort"/>
+            description="Create new OutputPort"
+            genNodes="//@diagram/@childNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="InputPort"
             description="Create new InputPort"
-            genLinks="//@diagram/@links.0"/>
+            genNodes="//@diagram/@childNodes.0"/>
       </groups>
     </palette>
     <preferencePages
@@ -397,14 +312,14 @@
     <childReferences
         child="//@diagram"/>
     <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@childNodes.0"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@childNodes.1"/>
-    <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.0"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.0"/>
+    <childReferences
+        parent="//@diagram/@topLevelNodes.1"
+        child="//@diagram/@childNodes.1"/>
     <childReferences
         parent="//@diagram"
         child="//@diagram/@topLevelNodes.1"/>
@@ -414,156 +329,98 @@
         groupName="links"
         groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.1"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.2"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@topLevelNodes.0"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@topLevelNodes.1"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@childNodes.0"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.0"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@childNodes.1"
         referenceType="out_target"
         groupName="target"
         groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.1"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="in_source"
         groupName="incoming links"
         groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@links.0"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@links.0"
-        child="//@diagram/@links.2"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@links.2"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
         child="//@diagram/@topLevelNodes.0"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@topLevelNodes.1"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@childNodes.0"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.0"
-        child="//@diagram/@links.2"
+        child="//@diagram/@links.0"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences
-        parent="//@diagram/@links.2"
+        parent="//@diagram/@links.0"
         child="//@diagram/@childNodes.1"
         referenceType="in_source"
         groupName="source"
         groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences
         parent="//@diagram/@childNodes.1"
-        child="//@diagram/@links.2"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
         child="//@diagram/@links.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.0"
-        child="//@diagram/@links.2"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@links.1"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@links.2"
         referenceType="out_target"
         groupName="outgoing links"
         groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
@@ -594,7 +451,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
+        uses="//@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

@@ -26,16 +26,16 @@ public class GraphicalProcessEditorModelEditPartFactory implements
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart(
 						view);
 
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart(
+						view);
+
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart(
 						view);
 
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart.VISUAL_ID:
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart(
-						view);
-
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart(
 						view);
 
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
@@ -52,18 +52,6 @@ public class GraphicalProcessEditorModelEditPartFactory implements
 
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart.VISUAL_ID:
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart(
-						view);
-
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPort2EditPart(
-						view);
-
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPort2EditPart(
-						view);
-
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValue2EditPart(
 						view);
 
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:
