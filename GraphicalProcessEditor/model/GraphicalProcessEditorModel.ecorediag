@@ -162,7 +162,7 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_mM7MwbBTEeK9LIe0rZByUg" x="-54" y="-9"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_mM7MwrBTEeK9LIe0rZByUg" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_mM7Mw7BTEeK9LIe0rZByUg" x="10" y="10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_mM7Mw7BTEeK9LIe0rZByUg" x="-83" y="-11"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_mM6lsbBTEeK9LIe0rZByUg" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_mM6lsrBTEeK9LIe0rZByUg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
