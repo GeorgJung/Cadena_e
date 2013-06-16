@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphicalprocesseditormodel:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:graphicalprocesseditormodel="http://graphicalprocesseditormodel/1.0" Start="//@Processes.0" End="//@Processes.3 //@Processes.2">
+  <Processes xsi:type="graphicalprocesseditormodel:Process" Name="A" ImagePath="">
+    <States>A: i ;</States>
+    <States>B : i++;</States>
+    <OutputPorts>
+      <Transactions Value="A" Source="//@Processes.0/@OutputPorts.0" Target="//@Processes.3"/>
+    </OutputPorts>
+    <OutputPorts/>
+    <OutputPorts>
+      <Transactions Value="dsf" Source="//@Processes.0/@OutputPorts.2" Target="//@Processes.2"/>
+    </OutputPorts>
+    <OutputPorts>
+      <Transactions Value="t1" Source="//@Processes.0/@OutputPorts.3" Target="//@Processes.1"/>
+    </OutputPorts>
+    <InputPort/>
+  </Processes>
+  <Processes xsi:type="graphicalprocesseditormodel:Process" Name="B">
+    <OutputPorts/>
+    <OutputPorts/>
+    <OutputPorts>
+      <Transactions Value="B" Source="//@Processes.1/@OutputPorts.2" Target="//@Processes.3"></Transactions>
+    </OutputPorts>
+    <InputPort/>
+  </Processes>
+  <Processes xsi:type="graphicalprocesseditormodel:Process" Name="C">
+    <OutputPorts>
+      <Transactions Value="dfsf" Source="//@Processes.2/@OutputPorts.0" Target="//@Processes.3"/>
+    </OutputPorts>
+    <OutputPorts/>
+    <OutputPorts/>
+    <InputPort/>
+  </Processes>
+  <Processes xsi:type="graphicalprocesseditormodel:Process" Name="D">
+    <OutputPorts/>
+    <OutputPorts/>
+    <OutputPorts/>
+    <InputPort/>
+  </Processes>
+</graphicalprocesseditormodel:Graph>
+
