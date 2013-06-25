@@ -35,8 +35,14 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001);
 			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Join_2002);
+			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.Process_2001);
+			return types;
+		}
+		if (editPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.InputPort_3001);
+			types.add(GraphicalProcessEditor.graphicalprocesseditormodel.diagram.providers.GraphicalProcessEditorModelElementTypes.OutputPort_3002);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -48,12 +54,20 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
 		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {
 			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
-			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) sourceEditPart)
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
@@ -65,12 +79,20 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 	public List getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
 		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {
 			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
-			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) targetEditPart)
+		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
@@ -85,12 +107,20 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {
 			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
-			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) sourceEditPart)
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -103,12 +133,20 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
+		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
 		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {
 			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
-			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) targetEditPart)
+		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		return Collections.EMPTY_LIST;
@@ -121,12 +159,20 @@ public class GraphicalProcessEditorModelModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
 		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) {
 			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) {
-			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart) sourceEditPart)
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) {
+			return ((GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

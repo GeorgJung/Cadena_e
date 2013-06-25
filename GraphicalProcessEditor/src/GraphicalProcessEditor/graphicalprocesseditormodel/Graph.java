@@ -42,20 +42,30 @@ public interface Graph extends EObject {
 	EList<Node> getProcesses();
 
 	/**
-	 * Returns the value of the '<em><b>Start</b></em>' reference list.
-	 * The list contents are of type {@link GraphicalProcessEditor.graphicalprocesseditormodel.Node}.
+	 * Returns the value of the '<em><b>Start</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Start</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Start</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Start</em>' reference list.
+	 * @return the value of the '<em>Start</em>' reference.
+	 * @see #setStart(Node)
 	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage#getGraph_Start()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Node> getStart();
+	Node getStart();
+
+	/**
+	 * Sets the value of the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getStart <em>Start</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Start</em>' reference.
+	 * @see #getStart()
+	 * @generated
+	 */
+	void setStart(Node value);
 
 	/**
 	 * Returns the value of the '<em><b>End</b></em>' reference list.

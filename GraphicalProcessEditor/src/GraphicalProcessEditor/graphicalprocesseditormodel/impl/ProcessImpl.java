@@ -3,18 +3,23 @@
 package GraphicalProcessEditor.graphicalprocesseditormodel.impl;
 
 import GraphicalProcessEditor.graphicalprocesseditormodel.GraphicalprocesseditormodelPackage;
+import GraphicalProcessEditor.graphicalprocesseditormodel.InputPort;
+import GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +29,9 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getName <em>Name</em>}</li>
- *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getStates <em>States</em>}</li>
  *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getImagePath <em>Image Path</em>}</li>
+ *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getOutputPorts <em>Output Ports</em>}</li>
+ *   <li>{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.ProcessImpl#getInputPort <em>Input Port</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,16 +59,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStates() <em>States</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStates()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> states;
-
-	/**
 	 * The default value of the '{@link #getImagePath() <em>Image Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,6 +77,26 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 	 * @ordered
 	 */
 	protected String imagePath = IMAGE_PATH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getOutputPorts() <em>Output Ports</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutputPorts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OutputPort> outputPorts;
+
+	/**
+	 * The cached value of the '{@link #getInputPort() <em>Input Port</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputPort()
+	 * @generated
+	 * @ordered
+	 */
+	protected InputPort inputPort;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,18 +143,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getStates() {
-		if (states == null) {
-			states = new EDataTypeUniqueEList<String>(String.class, this, GraphicalprocesseditormodelPackage.PROCESS__STATES);
-		}
-		return states;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getImagePath() {
 		return imagePath;
 	}
@@ -160,15 +164,88 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OutputPort> getOutputPorts() {
+		if (outputPorts == null) {
+			outputPorts = new EObjectContainmentEList<OutputPort>(OutputPort.class, this, GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS);
+		}
+		return outputPorts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputPort getInputPort() {
+		return inputPort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInputPort(InputPort newInputPort, NotificationChain msgs) {
+		InputPort oldInputPort = inputPort;
+		inputPort = newInputPort;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT, oldInputPort, newInputPort);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputPort(InputPort newInputPort) {
+		if (newInputPort != inputPort) {
+			NotificationChain msgs = null;
+			if (inputPort != null)
+				msgs = ((InternalEObject)inputPort).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT, null, msgs);
+			if (newInputPort != null)
+				msgs = ((InternalEObject)newInputPort).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT, null, msgs);
+			msgs = basicSetInputPort(newInputPort, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT, newInputPort, newInputPort));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
+				return ((InternalEList<?>)getOutputPorts()).basicRemove(otherEnd, msgs);
+			case GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT:
+				return basicSetInputPort(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				return getName();
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				return getStates();
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				return getImagePath();
+			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
+				return getOutputPorts();
+			case GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT:
+				return getInputPort();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -185,12 +262,15 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				setName((String)newValue);
 				return;
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				getStates().clear();
-				getStates().addAll((Collection<? extends String>)newValue);
-				return;
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				setImagePath((String)newValue);
+				return;
+			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
+				getOutputPorts().clear();
+				getOutputPorts().addAll((Collection<? extends OutputPort>)newValue);
+				return;
+			case GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT:
+				setInputPort((InputPort)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -207,11 +287,14 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				getStates().clear();
-				return;
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				setImagePath(IMAGE_PATH_EDEFAULT);
+				return;
+			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
+				getOutputPorts().clear();
+				return;
+			case GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT:
+				setInputPort((InputPort)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -227,10 +310,12 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		switch (featureID) {
 			case GraphicalprocesseditormodelPackage.PROCESS__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case GraphicalprocesseditormodelPackage.PROCESS__STATES:
-				return states != null && !states.isEmpty();
 			case GraphicalprocesseditormodelPackage.PROCESS__IMAGE_PATH:
 				return IMAGE_PATH_EDEFAULT == null ? imagePath != null : !IMAGE_PATH_EDEFAULT.equals(imagePath);
+			case GraphicalprocesseditormodelPackage.PROCESS__OUTPUT_PORTS:
+				return outputPorts != null && !outputPorts.isEmpty();
+			case GraphicalprocesseditormodelPackage.PROCESS__INPUT_PORT:
+				return inputPort != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -247,8 +332,6 @@ public class ProcessImpl extends NodeImpl implements GraphicalProcessEditor.grap
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", States: ");
-		result.append(states);
 		result.append(", ImagePath: ");
 		result.append(imagePath);
 		result.append(')');

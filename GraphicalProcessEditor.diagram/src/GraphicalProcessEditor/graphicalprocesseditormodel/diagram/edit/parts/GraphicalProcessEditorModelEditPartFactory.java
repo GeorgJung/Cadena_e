@@ -26,6 +26,10 @@ public class GraphicalProcessEditorModelEditPartFactory implements
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.GraphEditPart(
 						view);
 
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart(
+						view);
+
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart.VISUAL_ID:
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessEditPart(
 						view);
@@ -34,8 +38,20 @@ public class GraphicalProcessEditorModelEditPartFactory implements
 				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessNameEditPart(
 						view);
 
-			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart.VISUAL_ID:
-				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.JoinEditPart(
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.InputPortEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValueEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.OutputPortValueEditPart(
+						view);
+
+			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart.VISUAL_ID:
+				return new GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.ProcessProcessFigureCompartmentEditPart(
 						view);
 
 			case GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.parts.TransactionEditPart.VISUAL_ID:

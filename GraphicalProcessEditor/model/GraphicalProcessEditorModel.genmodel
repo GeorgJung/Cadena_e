@@ -22,8 +22,13 @@
     <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Join"/>
     <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//Process">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Process/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Process/States"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//Process/ImagePath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Process/OutputPorts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GraphicalProcessEditorModel.ecore#//Process/InputPort"/>
     </genClasses>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//OutputPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GraphicalProcessEditorModel.ecore#//OutputPort/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="GraphicalProcessEditorModel.ecore#//InputPort"/>
   </genPackages>
 </genmodel:GenModel>

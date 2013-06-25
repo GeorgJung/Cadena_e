@@ -75,7 +75,7 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	int GRAPH__PROCESSES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Start</b></em>' reference list.
+	 * The feature id for the '<em><b>Start</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,22 +232,31 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	int PROCESS__NAME = NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>States</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS__STATES = NODE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Image Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__IMAGE_PATH = NODE_FEATURE_COUNT + 2;
+	int PROCESS__IMAGE_PATH = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Output Ports</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__OUTPUT_PORTS = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Input Port</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__INPUT_PORT = NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Process</em>' class.
@@ -256,7 +265,72 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.OutputPortImpl <em>Output Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.OutputPortImpl
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getOutputPort()
+	 * @generated
+	 */
+	int OUTPUT_PORT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Transactions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_PORT__TRANSACTIONS = NODE__TRANSACTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_PORT__VALUE = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Output Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_PORT_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.InputPortImpl <em>Input Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.InputPortImpl
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getInputPort()
+	 * @generated
+	 */
+	int INPUT_PORT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Transactions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_PORT__TRANSACTIONS = NODE__TRANSACTIONS;
+
+	/**
+	 * The number of structural features of the '<em>Input Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_PORT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
 
 	/**
@@ -281,10 +355,10 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	EReference getGraph_Processes();
 
 	/**
-	 * Returns the meta object for the reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getStart <em>Start</em>}'.
+	 * Returns the meta object for the reference '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getStart <em>Start</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Start</em>'.
+	 * @return the meta object for the reference '<em>Start</em>'.
 	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Graph#getStart()
 	 * @see #getGraph()
 	 * @generated
@@ -398,17 +472,6 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	EAttribute getProcess_Name();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>States</em>'.
-	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process#getStates()
-	 * @see #getProcess()
-	 * @generated
-	 */
-	EAttribute getProcess_States();
-
-	/**
 	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getImagePath <em>Image Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -418,6 +481,59 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProcess_ImagePath();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getOutputPorts <em>Output Ports</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output Ports</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process#getOutputPorts()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_OutputPorts();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link GraphicalProcessEditor.graphicalprocesseditormodel.Process#getInputPort <em>Input Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Input Port</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.Process#getInputPort()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_InputPort();
+
+	/**
+	 * Returns the meta object for class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort <em>Output Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Output Port</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort
+	 * @generated
+	 */
+	EClass getOutputPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.OutputPort#getValue()
+	 * @see #getOutputPort()
+	 * @generated
+	 */
+	EAttribute getOutputPort_Value();
+
+	/**
+	 * Returns the meta object for class '{@link GraphicalProcessEditor.graphicalprocesseditormodel.InputPort <em>Input Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Port</em>'.
+	 * @see GraphicalProcessEditor.graphicalprocesseditormodel.InputPort
+	 * @generated
+	 */
+	EClass getInputPort();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -460,7 +576,7 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		EReference GRAPH__PROCESSES = eINSTANCE.getGraph_Processes();
 
 		/**
-		 * The meta object literal for the '<em><b>Start</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -556,20 +672,56 @@ public interface GraphicalprocesseditormodelPackage extends EPackage {
 		EAttribute PROCESS__NAME = eINSTANCE.getProcess_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>States</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROCESS__STATES = eINSTANCE.getProcess_States();
-
-		/**
 		 * The meta object literal for the '<em><b>Image Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute PROCESS__IMAGE_PATH = eINSTANCE.getProcess_ImagePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Ports</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__OUTPUT_PORTS = eINSTANCE.getProcess_OutputPorts();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Port</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__INPUT_PORT = eINSTANCE.getProcess_InputPort();
+
+		/**
+		 * The meta object literal for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.OutputPortImpl <em>Output Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.OutputPortImpl
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getOutputPort()
+		 * @generated
+		 */
+		EClass OUTPUT_PORT = eINSTANCE.getOutputPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT_PORT__VALUE = eINSTANCE.getOutputPort_Value();
+
+		/**
+		 * The meta object literal for the '{@link GraphicalProcessEditor.graphicalprocesseditormodel.impl.InputPortImpl <em>Input Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.InputPortImpl
+		 * @see GraphicalProcessEditor.graphicalprocesseditormodel.impl.GraphicalprocesseditormodelPackageImpl#getInputPort()
+		 * @generated
+		 */
+		EClass INPUT_PORT = eINSTANCE.getInputPort();
 
 	}
 

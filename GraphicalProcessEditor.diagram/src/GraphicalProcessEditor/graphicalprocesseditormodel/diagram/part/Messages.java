@@ -278,17 +278,52 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String OutputPort4CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String OutputPort4CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String InputPort5CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InputPort5CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String ProcessProcessFigureCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Transaction_4001_target;
+	public static String NavigatorGroupName_OutputPort_3002_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Transaction_4001_source;
+	public static String NavigatorGroupName_OutputPort_3002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Join_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Join_2002_outgoinglinks;
 
 	/**
 	 * @generated
@@ -308,12 +343,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Join_2002_incominglinks;
+	public static String NavigatorGroupName_Transaction_4003_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Join_2002_outgoinglinks;
+	public static String NavigatorGroupName_Transaction_4003_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_InputPort_3001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_InputPort_3001_outgoinglinks;
 
 	/**
 	 * @generated

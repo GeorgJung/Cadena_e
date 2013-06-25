@@ -69,7 +69,7 @@ public class TransactionReorientCommand extends EditElementCommand {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Node container = (GraphicalProcessEditor.graphicalprocesseditormodel.Node) getLink()
 				.eContainer();
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistTransaction_4001(container,
+				.getLinkConstraints().canExistTransaction_4003(container,
 						getLink(), getNewSource(), target);
 	}
 
@@ -88,7 +88,7 @@ public class TransactionReorientCommand extends EditElementCommand {
 		GraphicalProcessEditor.graphicalprocesseditormodel.Node container = (GraphicalProcessEditor.graphicalprocesseditormodel.Node) getLink()
 				.eContainer();
 		return GraphicalProcessEditor.graphicalprocesseditormodel.diagram.edit.policies.GraphicalProcessEditorModelBaseItemSemanticEditPolicy
-				.getLinkConstraints().canExistTransaction_4001(container,
+				.getLinkConstraints().canExistTransaction_4003(container,
 						getLink(), source, getNewTarget());
 	}
 

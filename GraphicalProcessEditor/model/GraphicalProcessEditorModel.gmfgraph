@@ -29,6 +29,9 @@
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
           name="JoinFigure">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
         <backgroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
@@ -43,26 +46,43 @@
           xsi:type="gmfgraph:Rectangle"
           name="ProcessFigure">
         <layout
+            xsi:type="gmfgraph:BorderLayout"/>
+        <children
+            xsi:type="gmfgraph:Rectangle"
+            name="ProcessCompartmentFigure">
+          <layoutData
+              xsi:type="gmfgraph:BorderLayoutData"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="ProcessNameFigure"
+              text="&lt;...>"/>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="OutputPortFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="OutputPortFigure">
+        <layout
             xsi:type="gmfgraph:FlowLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="ProcessNameFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="ProcessStatesFigure"
-            text="&lt;...>"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="ProcessImagePathFigure"
+            name="OutputPortValueFigure"
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
-      <accessors
-          figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="InputPortFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="InputPortFigure"/>
     </descriptors>
   </figures>
   <nodes
@@ -71,9 +91,19 @@
   <nodes
       name="Process"
       figure="ProcessFigure"/>
+  <nodes
+      name="OutputPort"
+      figure="OutputPortFigure"/>
+  <nodes
+      name="InputPort"
+      figure="InputPortFigure"/>
   <connections
       name="Transaction"
       figure="TransactionFigure"/>
+  <compartments
+      name="ProcessFigureCompartment"
+      figure="ProcessFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
   <labels
       name="TransactionValue"
       figure="TransactionFigure"
@@ -83,11 +113,7 @@
       figure="ProcessFigure"
       accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels
-      name="ProcessStates"
-      figure="ProcessFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.1"/>
-  <labels
-      name="ProcessImagePath"
-      figure="ProcessFigure"
-      accessor="//@figures.0/@descriptors.2/@accessors.2"/>
+      name="OutputPortValue"
+      figure="OutputPortFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.0"/>
 </gmfgraph:Canvas>
